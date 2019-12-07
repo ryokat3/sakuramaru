@@ -1,17 +1,18 @@
 const path = require('path')
+const package_json = require('./package.json')
 const fs = require('fs')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 class CopyPackageJsonPlugin {
+    constructor(filePath, template) {
+        this.filePath = filePath    
+        this.template = template
+    }
     apply(compiler) {
-        compiler.hooks.done.tap('Copy package.json Plugin', (
-            stats /* stats is passed as argument when done hook is tapped.  */
-        ) => {
-            const package_json = JSON.parse(fs.readFileSync('package.json'))
-            fs.writeFileSync('dist/package.json', JSON.stringify({
-                name: package_json.name,
-                version: package_json.version,
-                main: package_json.main                
+        compiler.hooks.assetEmitted.tap('Copy package.json Plugin', (fileName, content) => {
+            fs.writeFileSync(this.filePath, JSON.stringify({
+                ...this.template,
+                main: fileName
             }))     
         })
     }
@@ -61,7 +62,13 @@ const mainConfig = {
         extensions: ['.js', '.ts']
     },
     plugins: [
-        new CopyPackageJsonPlugin()
+        new CopyPackageJsonPlugin(
+            path.join(path.resolve(__dirname, 'dist'), 'package.json'),
+            {
+                name:package_json.name,
+                version:package_json.version
+            }
+        )
     ]
 }
 
