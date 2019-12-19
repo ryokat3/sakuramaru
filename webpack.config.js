@@ -66,7 +66,9 @@ const mainConfig = {
             path.join(path.resolve(__dirname, 'dist'), 'package.json'),
             {
                 name:package_json.name,
-                version:package_json.version
+                version:package_json.version,
+                description: package_json.description,
+                author: package_json.author
             }
         )
     ]

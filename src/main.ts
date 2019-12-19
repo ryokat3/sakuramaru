@@ -1,47 +1,59 @@
-import { App, app, BrowserWindow } from "electron"
+import * as fs from "fs"
+import * as path from "path"
+import { Command } from "commander"
+import { App, app, BrowserWindow, BrowserWindowConstructorOptions } from "electron"
+import { mergeobj } from "boost-ts/lib/funclib"
+import { appConfig } from "./appConfig"
 
-class SampleApp {
-    private mainWindow: BrowserWindow | null = null
-    private app: App
-    private mainURL: string = `file://${__dirname}/index.html`
+type AppConfig = typeof appConfig
 
-    constructor(app: App) {
-        this.app = app
-        this.app.on("window-all-closed", this.onWindowAllClosed.bind(this))
-        this.app.on("ready", this.create.bind(this))
-        this.app.on("activate", this.onActivated.bind(this))
-    }
+function getCommandLineParse(appConfig: AppConfig) {
+    return new Command(appConfig.app.name).option("--config <config>", "Config file", appConfig.app.configFileName)
+}
 
-    private onWindowAllClosed() {
-        this.app.quit()
-    }
+function initAppConfig(appConfig: AppConfig, processCwd:string, processArgv:string[]): AppConfig {
 
-    private create() {
-        this.mainWindow = new BrowserWindow({
-            width: 800,
-            height: 400,
-            minWidth: 500,
-            minHeight: 200,
-            acceptFirstMouse: true,
-            titleBarStyle: "hidden"
+    const commandOptions = getCommandLineParse(appConfig).parse(processArgv)
+    const configFilePath = path.join(processCwd, (commandOptions.config) ? commandOptions.config : appConfig.app.configFileName)
+
+    return mergeobj(appConfig, fs.existsSync(configFilePath) ? JSON.parse(fs.readFileSync(configFilePath, "utf-8")) : {})
+}
+
+async function initApp(app:App):Promise<void> {
+    return new Promise((resolve)=>{
+        app.on("window-all-closed", () => {
+            app.quit()
         })
 
-        this.mainWindow.loadURL(this.mainURL)
-
-        this.mainWindow.on("closed", () => {
-            this.mainWindow = null
+        app.on("ready", () => {
+            resolve()
         })
-    }
 
-    private onReady() {
-        this.create()
-    }
+        app.on("activate", () => {
 
-    private onActivated() {
-        if (this.mainWindow === null) {
-            this.create()
-        }
+        })
+    })
+}
+
+function createWindow(url:string, windowOptions:BrowserWindowConstructorOptions) {
+    const win = new BrowserWindow(windowOptions)
+
+    win.loadURL(url)
+    win.on("closed", () => { })
+
+    return win  
+}
+
+async function init() {
+    const config = initAppConfig(appConfig, process.cwd(), process.argv)
+    await initApp(app)
+    const win = createWindow(`file://${__dirname}/index.html`, config.windowOptions)
+
+    return {
+        config: config,
+        app: app,
+        win: win    
     }
 }
 
-const MyApp: SampleApp = new SampleApp(app)
+init()

@@ -1,9 +1,13 @@
 import React from "react"
 import ReactDom from "react-dom"
+import { Provider } from 'react-redux'
+import { store } from './store'
+import { Top } from "./component/Top"
 
-const container = document.getElementById("contents")
 
 ReactDom.render(
-    <p>Hello, world</p>,
-    container
+    <Provider store={store}>
+        <Top />    
+    </Provider>,
+    document.getElementById("contents")    
 )

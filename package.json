@@ -4,11 +4,13 @@
   "description": "3D Aerial Photograph Viewer",
   "main": "main.js",
   "scripts": {
-    "start": "electron ./dist",
-    "build": "webpack-cli",
     "clean": "shx rm -rf dist release",
+    "build": "webpack-cli",
     "release": "electron-builder build --win",
-    "lint": "tslint --project ."    
+    "start": "electron ./dist",
+    "test": "cross-env TS_NODE_PROJECT=tsconfig.json mocha --timeout 30000 --exit -r ts-node/register test/**/*.ts",
+    "test:file": "cross-env TS_NODE_PROJECT=tsconfig.json mocha --timeout 300000 --exit -r ts-node/register",
+    "lint": "tslint --project ."
   },
   "keywords": [
     "TypeScript",
@@ -20,34 +22,44 @@
   "build": {
     "appId": "net.canadian-wisteria.sakuramaru",
     "directories": {
-        "app": "./dist",
-        "output": "./release"
+      "app": "./dist",
+      "output": "./release"
     },
     "win": {
       "target": "portable"
     }
   },
   "dependencies": {
+    "boost-ts": "^1.2.0",
+    "commander": "^4.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-redux": "^7.1.3",
-    "redux": "^4.0.4"
+    "redux": "^4.0.4",
+    "typescript-fsa": "^3.0.0",
+    "typescript-fsa-reducers": "^1.2.1"
   },
   "devDependencies": {
-    "@types/react": "^16.9.15",
+    "@types/chai": "^4.2.7",
+    "@types/mocha": "^5.2.7",
+    "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
     "@types/react-redux": "^7.1.5",
     "@types/webpack": "^4.41.0",
+    "chai": "^4.2.0",
     "copy-pkg": "^1.0.0",
-    "electron": "^7.1.3",
+    "cross-env": "^6.0.3",
+    "electron": "^7.1.6",
     "electron-builder": "^21.2.0",
     "html-webpack-plugin": "^3.2.0",
+    "mocha": "^6.2.2",
     "shx": "^0.3.2",
     "ts-loader": "^6.2.1",
+    "ts-node": "^8.5.4",
     "tslint": "^5.20.1",
     "tslint-loader": "^3.5.4",
     "typescript": "^3.7.3",
-    "webpack": "^4.41.2",
+    "webpack": "^4.41.4",
     "webpack-cli": "^3.3.10"
   }
 }
