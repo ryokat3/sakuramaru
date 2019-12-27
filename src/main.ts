@@ -4,7 +4,7 @@ import { App, app, BrowserWindow, BrowserWindowConstructorOptions } from "electr
 import * as fs from "fs"
 import * as path from "path"
 import { appConfig } from "./appConfig"
-import { TopActionType } from "./renderer/topState"
+import { TopActionType } from "./renderer/top/topState"
 import { getTypedIpcMain } from "./utils/ipcUtils"
 
 type AppConfig = typeof appConfig
@@ -18,9 +18,7 @@ function initAppConfig(appConfig: AppConfig, processCwd: string, processArgv: st
     const commandOptions = getCommandLineParse(appConfig).parse(processArgv)
     const configFilePath = path.join(processCwd,
         (commandOptions.config) ? commandOptions.config : appConfig.app.configFileName)
-
-    return mergeobj(appConfig,
-        fs.existsSync(configFilePath) ? JSON.parse(fs.readFileSync(configFilePath, "utf-8")) : {})
+    return mergeobj(appConfig, fs.existsSync(configFilePath) ? JSON.parse(fs.readFileSync(configFilePath, "utf-8")) : {})
 }
 
 async function initApp(app: App): Promise<void> {
@@ -39,6 +37,12 @@ async function initApp(app: App): Promise<void> {
     })
 }
 
+function initIpc(config:AppConfig) {
+    const ipc = getTypedIpcMain<TopActionType>()
+
+    ipc.handle("getAppConfig", () => config)
+}
+
 function createWindow(url: string, windowOptions: BrowserWindowConstructorOptions) {
     const win = new BrowserWindow(windowOptions)
 
@@ -51,11 +55,9 @@ function createWindow(url: string, windowOptions: BrowserWindowConstructorOption
 async function init() {
     const config = initAppConfig(appConfig, process.cwd(), process.argv)
     await initApp(app)
+    initIpc(config)
+
     const win = createWindow(`file://${__dirname}/index.html`, config.windowOptions)
-
-    const ipc = getTypedIpcMain<TopActionType>()
-
-    ipc.handle("getAppConfig", () => config)
 
     return {
         config,

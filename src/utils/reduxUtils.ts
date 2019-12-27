@@ -1,6 +1,6 @@
 import { FilterObject, SelectObject } from "boost-ts/lib/typelib"
 import { FSA } from "flux-standard-action"
-import { Dispatch } from "redux"
+import { Dispatch } from "react"
 import { Unpromise } from "./tsUtils"
 
 export interface ActionSetType { [name: string]: any }
@@ -44,9 +44,9 @@ export class Reducer<T extends ActionSetType, State, Keys= never> {
         } as any)
     }
 
-    public build(initialState: State) {
+    public build() {
         const reducer = this.reducer
-        return function(state: State = initialState, action: FSA<string>) {
+        return function(state: State, action: FSA<string>) {
             const callback = reducer[action.type]
             return (callback !== undefined) ? callback(state, action.payload as any, action.error, action.meta) : state
         }

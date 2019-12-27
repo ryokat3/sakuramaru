@@ -1,6 +1,5 @@
-
-import { AppConfig } from "../appConfig"
-import { Reducer } from "../utils/reduxUtils"
+import { AppConfig } from "../../appConfig"
+import { Reducer } from "../../utils/reduxUtils"
 
 
 export type TopActionType = {
@@ -8,7 +7,7 @@ export type TopActionType = {
     count: number
 }
 
-const initialTopState = {
+export const initialTopState = {
     appConfig: undefined as AppConfig | undefined
 }
 
@@ -21,4 +20,4 @@ export const topStateReducer = new Reducer<TopActionType, TopStateType>()
             appConfig: appConfig         
         }
     })
-    .build(initialTopState)
+    .build()

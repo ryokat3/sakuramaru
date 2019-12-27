@@ -1,12 +1,8 @@
 import React from "react"
 import ReactDom from "react-dom"
-import { Provider } from "react-redux"
-import { Top } from "./component/Top"
-import { appStore } from "./appStore"
+import { Top } from "./top/Top"
 
-ReactDom.render(
-    <Provider store={appStore}>
-        <Top />
-    </Provider>,
+ReactDom.render(   
+    <Top />,    
     document.getElementById("contents")
 )
