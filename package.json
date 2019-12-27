@@ -1,6 +1,6 @@
 {
   "name": "sakuramaru",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "3D Aerial Photograph Viewer",
   "main": "main.js",
   "scripts": {
@@ -30,7 +30,7 @@
     }
   },
   "dependencies": {
-    "boost-ts": "^1.2.2",
+    "boost-ts": "^2.0.1",
     "commander": "^4.0.1",
     "electron": "^7.1.7",
     "flux-standard-action": "^2.1.1",

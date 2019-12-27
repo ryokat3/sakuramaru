@@ -1,4 +1,4 @@
-import { mergeobj } from "boost-ts/lib/funclib"
+import { mergeobj } from "boost-ts"
 import { Command } from "commander"
 import { App, app, BrowserWindow, BrowserWindowConstructorOptions } from "electron"
 import * as fs from "fs"

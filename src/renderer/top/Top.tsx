@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useEffect} from "react"
-import { AsyncActionType } from "../../utils/reduxUtils"
+import { AsyncActionType } from "../../utils/fluxUtils"
 import { createIpcRendererInvokeDispatcher } from "../../utils/ipcUtils"
 import { TopActionType, topStateReducer, initialTopState } from "./topState"
 

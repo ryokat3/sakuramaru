@@ -1,6 +1,6 @@
-import { FilterObject, SelectObject } from "boost-ts/lib/typelib"
 import { FSA } from "flux-standard-action"
 import { Dispatch } from "react"
+import { FilterObject, SelectObject, MergeType } from "boost-ts"
 import { Unpromise } from "./tsUtils"
 
 export interface ActionSetType { [name: string]: any }
@@ -42,6 +42,10 @@ export class Reducer<T extends ActionSetType, State, Keys= never> {
             ...this.reducer,
             [key]: callback
         } as any)
+    }
+
+    public combine<T2 extends ActionSetType, State, Keys2>(other:Reducer<T2,State, Keys2>) {
+        return new Reducer<MergeType<string,T,T2>,State,Keys|Keys2>({ ...this.reducer, ...other.reducer } as any)
     }
 
     public build() {

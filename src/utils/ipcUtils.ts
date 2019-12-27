@@ -1,9 +1,9 @@
 import { ipcMain, IpcMainEvent, IpcMainInvokeEvent, ipcRenderer, IpcRendererEvent } from "electron"
 import { FSA } from "flux-standard-action"
 import { Dispatch } from "react"
-import { ActionSetType } from "./reduxUtils"
+import { ActionSetType } from "./fluxUtils"
 import { PromiseIfNot, PromiseUnion } from "./tsUtils"
-import { createAsyncDispatcher } from "./reduxUtils"
+import { createAsyncDispatcher } from "./fluxUtils"
 
 export function getTypedIpcMain <T extends ActionSetType>() {
     return {
