@@ -11,6 +11,11 @@ export const appConfig = {
         minWidth: 500,
         minHeight: 200,
         acceptFirstMouse: true,
-        titleBarStyle: "hidden"
+        titleBarStyle: "hidden",
+        webPreferences: {
+            nodeIntegration: true
+        }
     } as BrowserWindowConstructorOptions
 }
+
+export type AppConfig = typeof appConfig
