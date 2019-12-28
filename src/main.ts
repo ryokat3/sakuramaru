@@ -4,8 +4,8 @@ import { App, app, BrowserWindow, BrowserWindowConstructorOptions } from "electr
 import * as fs from "fs"
 import * as path from "path"
 import { appConfig } from "./appConfig"
-import { TopActionType } from "./renderer/top/topState"
-import { getTypedIpcMain } from "./utils/ipcUtils"
+import { TopActionType } from "./renderer/top/topAction"
+import { getTypedIpcMain } from "./utils/TypedIPC"
 
 type AppConfig = typeof appConfig
 
@@ -37,7 +37,7 @@ async function initApp(app: App): Promise<void> {
     })
 }
 
-function initIpc(config:AppConfig) {
+function initIpc(config: AppConfig) {
     const ipc = getTypedIpcMain<TopActionType>()
 
     ipc.handle("getAppConfig", () => config)

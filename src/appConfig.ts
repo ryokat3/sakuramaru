@@ -3,7 +3,9 @@ import { BrowserWindowConstructorOptions } from "electron"
 export const appConfig = {
     app: {
         name: "sakuramaru",
-        configFileName: "sakuramaru.json"
+        configFileName: "sakuramaru.json",
+        mapDir: "map",
+        mapInfo: "mapinfo.json"
     },
     windowOptions: {
         width: 1200,

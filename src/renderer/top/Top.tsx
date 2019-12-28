@@ -1,13 +1,12 @@
 import * as React from "react"
 import { useEffect} from "react"
-import { AsyncActionType } from "../../utils/fluxUtils"
-import { createIpcRendererInvokeDispatcher } from "../../utils/ipcUtils"
-import { TopActionType, topStateReducer, initialTopState } from "./topState"
+import { topDispatcher } from "./topDispatcher"
+import { initialTopState, topReducer } from "./topReducer"
 
-export const Top: React.FunctionComponent<{}> = () => {  
-    const [state, dispatch] = React.useReducer(topStateReducer, initialTopState)         
-    const dispatcher = createIpcRendererInvokeDispatcher<AsyncActionType<TopActionType>>(dispatch, [ "getAppConfig" ])
-    
+export const Top: React.FunctionComponent<{}> = () => {
+    const [state, dispatch] = React.useReducer(topReducer, initialTopState)
+    const dispatcher = topDispatcher.build(dispatch)
+
     useEffect(() => {
         dispatcher.getAppConfig()
     }, [])

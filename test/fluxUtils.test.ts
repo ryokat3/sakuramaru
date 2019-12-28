@@ -1,23 +1,36 @@
 import * as chai from "chai"
-import { Reducer } from "../src/utils/fluxUtils"
+import { Dispatcher, Reducer } from "../src/utils/TypedFlux"
 
-describe("flusUtils", ()=>{
-    it("Reducer combine", ()=>{
-        const def1 = {
-            item1: null
-        }
-        const def2 = {
-            item2: null
-        }
+interface ActionDesign {
+    "async": (val1: string, val2: number) => Promise<string>,
+    "sync": (val: string) => string,
+    "noparam": void,
+    "paramBool": boolean,
+    "paramString": string
+}
 
-        const reducer1 = new Reducer<typeof def1, number>()
-        const reducer2 = new Reducer<typeof def2, number>()
+describe("flusUtils", () => {
+    it("Reducer basic", () => {
 
-        const combine = reducer1.combine(reducer2)
-        
-        const reducer = combine.case("item1", (n)=>n+1).case("item2", (n)=>n+2).build()
+        const reducer1 = new Reducer<ActionDesign, string>()
+            .add("noparam", (state: string) => `${state}_1`)
+            .add("sync", (state: string, payload) => `${state}_${payload}`)
+            .build()
 
-        chai.assert.equal(reducer(5, { type: "item1"}), 6)
-        chai.assert.equal(reducer(5, { type: "item2"}), 7)
-    })    
+        chai.assert.equal(reducer1("Hello", { type: "noparam" }), "Hello_1")
+        chai.assert.equal(reducer1("Hello", { type: "sync", payload: "hehe"}), "Hello_hehe")
+    })
+
+    it("Dispatcher basic", () => {
+        const dispatcher = new Dispatcher<ActionDesign>()
+            .addAction("noparam")
+            .addAsyncAction("async", async (val1: string, val2: number) => `${val1}${val2}`)
+            .addSyncAction("sync", (val1: string) => val1)
+            .addParameterAction("paramBool")
+            .addParameterAction("paramString")
+        const keys = Array.from(Object.keys(dispatcher.build(undefined as any)))
+        console.log(keys)
+
+        chai.assert.equal(keys.length, 5)
+    })
 })

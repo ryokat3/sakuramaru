@@ -1,9 +1,6 @@
 import { ipcMain, IpcMainEvent, IpcMainInvokeEvent, ipcRenderer, IpcRendererEvent } from "electron"
-import { FSA } from "flux-standard-action"
-import { Dispatch } from "react"
-import { ActionSetType } from "./fluxUtils"
+import { ActionSetType } from "./TypedFlux"
 import { PromiseIfNot, PromiseUnion } from "./tsUtils"
-import { createAsyncDispatcher } from "./fluxUtils"
 
 export function getTypedIpcMain <T extends ActionSetType>() {
     return {
@@ -82,10 +79,4 @@ export function getTypedIpcRenderer <T extends ActionSetType>() {
             ...args: Parameters<T[Channel]>
         ) => ipcRenderer.sendToHost(channel, ...args)
     }
-}
-
-export function createIpcRendererInvokeDispatcher<T extends { [name: string]: (...args: any[]) => Promise<any> }>(dispatch: Dispatch<FSA<string>>, namelist: Array<keyof T>) {
-    return createAsyncDispatcher(dispatch, namelist.reduce((acc, name) => {
-        return { ...acc, [name]: async (...args: any[]) => await ipcRenderer.invoke(name as string, ...args) }
-    }, Object.create(null)))
 }
