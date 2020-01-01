@@ -1,43 +1,42 @@
 import { FilterObject, SelectObject } from "boost-ts"
 import { FSA } from "flux-standard-action"
 import { Dispatch } from "react"
+import { IDLType } from "./IDL"
 import { Unpromise } from "./tsUtils"
 
-export interface ActionSetType { [name: string]: any }
+type DispatcherType<IDL> =
+    IDL extends (null | undefined | void | never) ? () => void
+        : IDL extends (...args: unknown[]) => Promise<unknown> ? (...args: Parameters<IDL>) => Promise<void>
+        : IDL extends (...args: unknown[]) => unknown ? (...args: Parameters<IDL>) => void
+        : (value: IDL) => void
 
-type DispatcherType<Action> =
-    Action extends (null | undefined | void | never) ? () => void
-        : Action extends (...args: unknown[]) => Promise<unknown> ? (...args: Parameters<Action>) => Promise<void>
-        : Action extends (...args: unknown[]) => unknown ? (...args: Parameters<Action>) => void
-        : (value: Action) => void
-
-export class Dispatcher<T extends ActionSetType, Keys extends keyof T = never> {
+export class Dispatcher<T extends IDLType, Keys extends keyof T = never> {
     constructor(
         private readonly dispatcher: { [Key in keyof T]: (dispatch: Dispatch<FSA<string>>) => DispatcherType<T[Key]> } = Object.create(null)
     ) {}
 
-    public addAction<Key extends keyof SelectObject<{ [Key in Exclude<keyof T, Keys>]: T[Key] }, null | undefined | void >>(key: Key) {
+    public addAction<Key extends keyof SelectObject<{ [LtdKey in Exclude<keyof T, Keys>]: T[LtdKey] }, null | undefined | void >>(key: Key) {
         return new Dispatcher<T, Keys|Key>({
             ...this.dispatcher,
             [key]: (dispatch: Dispatch<FSA<string>>) => () => dispatch({ type: key as string })
         })
     }
 
-    public addParameterAction<Key extends keyof FilterObject<{ [Key in Exclude<keyof T, Keys>]: T[Key] }, ((...args: any[]) => any) >>(key: Key) {
+    public addParameterAction<Key extends keyof FilterObject<{ [LtdKey in Exclude<keyof T, Keys>]: T[LtdKey] }, ((...args: any[]) => any) >>(key: Key) {
         return new Dispatcher<T, Keys|Key>({
             ...this.dispatcher,
             [key]: (dispatch: Dispatch<FSA<string>>) => (payload: T[Key]) => dispatch({ type: key as string, payload })
         })
     }
 
-    public addSyncAction<Key extends keyof FilterObject<SelectObject<{ [Key in Exclude<keyof T, Keys>]: T[Key] }, (...args: any[]) => any >, (...args: any[]) => Promise<any> >>(key: Key, func: T[Key]) {
+    public addSyncAction<Key extends keyof FilterObject<SelectObject<{ [LtdKey in Exclude<keyof T, Keys>]: T[LtdKey] }, (...args: any[]) => any >, (...args: any[]) => Promise<any> >>(key: Key, func: T[Key]) {
         return new Dispatcher<T, Keys|Key>({
             ...this.dispatcher,
             [key]: (dispatch: Dispatch<FSA<string>>) => (...args: Parameters<T[Key]>) => dispatch({ type: key as string, payload: func(...args) })
         })
     }
 
-    public addAsyncAction<Key extends keyof SelectObject<{ [Key in Exclude<keyof T, Keys>]: T[Key] }, (...args: any[]) => Promise<any>>>(key: Key, func: T[Key]) {
+    public addAsyncAction<Key extends keyof SelectObject<{ [LtdKey in Exclude<keyof T, Keys>]: T[LtdKey] }, (...args: any[]) => Promise<any>>>(key: Key, func: T[Key]) {
         return new Dispatcher<T, Keys|Key>({
             ...this.dispatcher,
             [key]: (dispatch: Dispatch<FSA<string>>) => async (...args: Parameters<T[Key]>) => dispatch({ type: key as string, payload: await func(...args) })
@@ -54,12 +53,12 @@ export class Dispatcher<T extends ActionSetType, Keys extends keyof T = never> {
     }
 }
 
-type ReducerCallbackType<Action, State> =
-    Action extends (null | undefined | void) ? (state: State, payload?: undefined, error?: boolean, meta?: any) => State
-        : Action extends (...args: unknown[]) => unknown ? (state: State, result: Unpromise<ReturnType<Action>>, error?: boolean, meta?: any) => State
-        : (state: State, value: Action, error?: boolean, meta?: any) => State
+type ReducerCallbackType<IDL, State> =
+    IDL extends (null | undefined | void) ? (state: State, payload?: undefined, error?: boolean, meta?: any) => State
+        : IDL extends (...args: unknown[]) => unknown ? (state: State, result: Unpromise<ReturnType<IDL>>, error?: boolean, meta?: any) => State
+        : (state: State, value: IDL, error?: boolean, meta?: any) => State
 
-export class Reducer<T extends ActionSetType, State, Keys extends keyof T = never> {
+export class Reducer<T extends IDLType, State, Keys extends keyof T = never> {
     constructor(
         private readonly reducer: { [Key in keyof T]: ReducerCallbackType<T[Key], State> } = Object.create(null)
     ) {}
@@ -73,7 +72,7 @@ export class Reducer<T extends ActionSetType, State, Keys extends keyof T = neve
 
     public build() {
         const reducer = this.reducer
-        return function(state: State, action: FSA<string, any>) {
+        return (state: State, action: FSA<string, any>) => {
             const callback = reducer[action.type]
             return (callback !== undefined) ? callback(state, action.payload as any, action.error, action.meta) : state
         }

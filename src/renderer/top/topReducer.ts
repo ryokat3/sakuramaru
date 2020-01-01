@@ -1,5 +1,5 @@
 import { AppConfig } from "../../appConfig"
-import { Reducer } from "../../utils/TypedFlux"
+import { Reducer } from "../../utils/IDLFlux"
 import { TopActionType } from "./topAction"
 
 export const initialTopState = {

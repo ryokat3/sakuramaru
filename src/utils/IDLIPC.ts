@@ -1,39 +1,36 @@
 import { ipcMain, IpcMainEvent, IpcMainInvokeEvent, ipcRenderer, IpcRendererEvent } from "electron"
-import { ActionSetType } from "./TypedFlux"
+import { IDLType } from "./IDL"
 import { PromiseUnion, Unpromise } from "./tsUtils"
 
-type ListenerType<T, EventType> = T extends null | undefined | void ? (event:EventType) => void
-    : T extends (...args:any[])=>null | undefined | void ?  (event:EventType) => void    
-    : T extends (...args:any[])=>any ?  (event:EventType, value:Unpromise<ReturnType<T>>) => void
-    : T extends any[] ? (event:EventType, ...args:T)=>void
-    : (event:EventType, value:T)=>void
-
-type HandlerType<T, EventType> = T extends null | undefined | void ? (event:EventType) => void
-    : T extends (...args:any[])=>any ?  (event:EventType, ...args:Parameters<T>) => PromiseUnion<ReturnType<T>>    
-    : (event:EventType)=>PromiseUnion<T>
+type ListenerType<T, EventType> = T extends null | undefined | void ? (event: EventType) => void
+    : T extends (...args: any[]) => null | undefined | void ?  (event: EventType) => void
+    : T extends (...args: any[]) => any ?  (event: EventType, value: Unpromise<ReturnType<T>>) => void
+    : T extends any[] ? (event: EventType, ...args: T) => void
+    : (event: EventType, value: T) => void
 
 type SendArgsType<T> = T extends null | undefined | void ? []
-    : T extends (...args:any[])=>any ?  Parameters<T>
+    : T extends (...args: any[]) => any ?  Parameters<T>
     : T extends any[] ? T
     : [ T ]
 
-type InvokeReturnType<T> = T extends (...args:any[])=>any ? Unpromise<ReturnType<T>> : void
+type HandlerType<T, EventType> = T extends (...args: any[]) => any ?  (event: EventType, ...args: Parameters<T>) => PromiseUnion<ReturnType<T>> : never
 
+type InvokeReturnType<T> = T extends (...args: any[]) => any ? Unpromise<ReturnType<T>> : never
 
-export function getTypedIpcMain <T extends ActionSetType>() {
+export function getTypedIpcMain <T extends IDLType>() {
     return {
         // Listener functions
         on: <Channel extends Extract<keyof T, string> > (
             channel: Channel,
-            listener: ListenerType<T[Channel], IpcMainEvent>,
+            listener: ListenerType<T[Channel], IpcMainEvent>
             ) => ipcMain.on(channel, listener),
         once: <Channel extends Extract<keyof T, string> > (
             channel: Channel,
-            listener: ListenerType<T[Channel], IpcMainEvent>,
+            listener: ListenerType<T[Channel], IpcMainEvent>
         ) => ipcMain.once(channel, listener),
         removeListener: <Channel extends Extract<keyof T, string> > (
             channel: Channel,
-            listener: ListenerType<T[Channel], IpcMainEvent>,
+            listener: ListenerType<T[Channel], IpcMainEvent>
         ) => ipcMain.removeListener(channel, listener),
         removeAllListeners: <Channel extends Extract<keyof T, string> > (
             ...channels: Channel[]
@@ -42,11 +39,11 @@ export function getTypedIpcMain <T extends ActionSetType>() {
         // Handler functions
         handle: <Channel extends Extract<keyof T, string> > (
             channel: Channel,
-            listener: HandlerType<T[Channel], IpcMainInvokeEvent>,
+            listener: HandlerType<T[Channel], IpcMainInvokeEvent>
         ) => ipcMain.handle(channel, listener),
         handleOnce: <Channel extends Extract<keyof T, string> > (
             channel: Channel,
-            listener: HandlerType<T[Channel], IpcMainInvokeEvent>,
+            listener: HandlerType<T[Channel], IpcMainInvokeEvent>
         ) => ipcMain.handleOnce(channel, listener),
         removeHandler: <Channel extends Extract<keyof T, string> > (
             channel: Channel
@@ -54,20 +51,20 @@ export function getTypedIpcMain <T extends ActionSetType>() {
     }
 }
 
-export function getTypedIpcRenderer <T extends ActionSetType>() {
+export function getTypedIpcRenderer <T extends IDLType>() {
     return {
         // Listener functions
         on: <Channel extends Extract<keyof T, string>>(
             channel: Channel,
-            listener: ListenerType<T[Channel], IpcRendererEvent>,
+            listener: ListenerType<T[Channel], IpcRendererEvent>
         ) => ipcRenderer.on(channel, listener),
         once: <Channel extends Extract<keyof T, string>>(
             channel: Channel,
-            listener: ListenerType<T[Channel], IpcRendererEvent>,
+            listener: ListenerType<T[Channel], IpcRendererEvent>
         ) => ipcRenderer.once(channel, listener),
         removeListener: <Channel extends Extract<keyof T, string>>(
             channel: Channel,
-            listener: ListenerType<T[Channel], IpcRendererEvent>,            
+            listener: ListenerType<T[Channel], IpcRendererEvent>
         ) => ipcRenderer.removeListener(channel, listener),
         removeAllListeners: <Channel extends Extract<keyof T, string>>(
             channel: Channel

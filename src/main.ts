@@ -5,7 +5,7 @@ import * as fs from "fs"
 import * as path from "path"
 import { appConfig } from "./appConfig"
 import { TopActionType } from "./renderer/top/topAction"
-import { getTypedIpcMain } from "./utils/TypedIPC"
+import { getTypedIpcMain } from "./utils/IDLIPC"
 
 type AppConfig = typeof appConfig
 

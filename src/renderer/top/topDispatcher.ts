@@ -1,5 +1,5 @@
-import { Dispatcher } from "../../utils/TypedFlux"
-import { getTypedIpcRenderer } from "../../utils/TypedIPC"
+import { Dispatcher } from "../../utils/IDLFlux"
+import { getTypedIpcRenderer } from "../../utils/IDLIPC"
 import { TopActionType } from "./topAction"
 
 const ipc = getTypedIpcRenderer<TopActionType>()

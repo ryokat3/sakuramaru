@@ -1,5 +1,5 @@
 import * as chai from "chai"
-import { Dispatcher, Reducer } from "../src/utils/TypedFlux"
+import { Dispatcher, Reducer } from "../src/utils/IDLFlux"
 
 interface ActionDesign {
     "async": (val1: string, val2: number) => Promise<string>,
@@ -29,7 +29,6 @@ describe("flusUtils", () => {
             .addParameterAction("paramBool")
             .addParameterAction("paramString")
         const keys = Array.from(Object.keys(dispatcher.build(undefined as any)))
-        console.log(keys)
 
         chai.assert.equal(keys.length, 5)
     })
