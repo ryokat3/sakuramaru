@@ -3,21 +3,19 @@ import { Command } from "commander"
 import { App, app, BrowserWindow, BrowserWindowConstructorOptions } from "electron"
 import * as fs from "fs"
 import * as path from "path"
-import { appConfig } from "./appConfig"
-import { TopActionType } from "./renderer/top/topAction"
+import { AppConfig, defaultAppConfig } from "./AppConfig"
+import { readMapInfo } from "./MapInfo"
+import { TopIDL } from "./renderer/mapviewer/TopIDL"
+import { getRuntimeInfo, RuntimeInfo } from "./RuntimeInfo"
 import { getTypedIpcMain } from "./utils/IDLIPC"
-
-type AppConfig = typeof appConfig
 
 function getCommandLineParse(appConfig: AppConfig) {
     return new Command(appConfig.app.name).option("--config <config>", "Config file", appConfig.app.configFileName)
 }
 
-function initAppConfig(appConfig: AppConfig, processCwd: string, processArgv: string[]): AppConfig {
-
-    const commandOptions = getCommandLineParse(appConfig).parse(processArgv)
-    const configFilePath = path.join(processCwd,
-        (commandOptions.config) ? commandOptions.config : appConfig.app.configFileName)
+function initAppConfig(runtimeInfo: RuntimeInfo, appConfig: AppConfig): AppConfig {
+    const commandOptions = getCommandLineParse(appConfig).parse(runtimeInfo.argv)
+    const configFilePath = path.join(runtimeInfo.dir, (commandOptions.config) ? commandOptions.config : appConfig.app.configFileName)
     return mergeobj(appConfig, fs.existsSync(configFilePath) ? JSON.parse(fs.readFileSync(configFilePath, "utf-8")) : {})
 }
 
@@ -37,10 +35,11 @@ async function initApp(app: App): Promise<void> {
     })
 }
 
-function initIpc(config: AppConfig) {
-    const ipc = getTypedIpcMain<TopActionType>()
+function initIpc(runtimeInfo: RuntimeInfo, appConfig: AppConfig) {
+    const ipc = getTypedIpcMain<TopIDL>()
 
-    ipc.handle("getAppConfig", () => config)
+    ipc.handle("getAppConfig", () => appConfig)
+    ipc.handle("getMapInfo", () => readMapInfo(runtimeInfo, appConfig))
 }
 
 function createWindow(url: string, windowOptions: BrowserWindowConstructorOptions) {
@@ -52,18 +51,19 @@ function createWindow(url: string, windowOptions: BrowserWindowConstructorOption
     return win
 }
 
-async function init() {
-    const config = initAppConfig(appConfig, process.cwd(), process.argv)
+async function init(runtimeInfo: RuntimeInfo) {
+    const appConfig = initAppConfig(runtimeInfo, defaultAppConfig)
     await initApp(app)
-    initIpc(config)
+    initIpc(runtimeInfo, appConfig)
 
-    const win = createWindow(`file://${__dirname}/index.html`, config.windowOptions)
+    const win = createWindow(`file://${__dirname}/index.html`, appConfig.windowOptions)
 
     return {
-        config,
+        config: appConfig,
+        runtimeInfo,
         app,
         win
     }
 }
 
-init()
+init(getRuntimeInfo())

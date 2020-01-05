@@ -1,6 +1,6 @@
 import { BrowserWindowConstructorOptions } from "electron"
 
-export const appConfig = {
+export const defaultAppConfig = {
     app: {
         name: "sakuramaru",
         configFileName: "sakuramaru.json",
@@ -20,4 +20,4 @@ export const appConfig = {
     } as BrowserWindowConstructorOptions
 }
 
-export type AppConfig = typeof appConfig
+export type AppConfig = typeof defaultAppConfig

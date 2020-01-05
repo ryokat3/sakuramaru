@@ -4,7 +4,7 @@ import { Dispatch } from "react"
 import { IDLType } from "./IDL"
 import { Unpromise } from "./tsUtils"
 
-type DispatcherType<IDL> =
+type DispatchFunctionType<IDL> =
     IDL extends (null | undefined | void | never) ? () => void
         : IDL extends (...args: unknown[]) => Promise<unknown> ? (...args: Parameters<IDL>) => Promise<void>
         : IDL extends (...args: unknown[]) => unknown ? (...args: Parameters<IDL>) => void
@@ -12,7 +12,7 @@ type DispatcherType<IDL> =
 
 export class Dispatcher<T extends IDLType, Keys extends keyof T = never> {
     constructor(
-        private readonly dispatcher: { [Key in keyof T]: (dispatch: Dispatch<FSA<string>>) => DispatcherType<T[Key]> } = Object.create(null)
+        private readonly dispatcher: { [Key in keyof T]: (dispatch: Dispatch<FSA<string>>) => DispatchFunctionType<T[Key]> } = Object.create(null)
     ) {}
 
     public addAction<Key extends keyof SelectObject<{ [LtdKey in Exclude<keyof T, Keys>]: T[LtdKey] }, null | undefined | void >>(key: Key) {
@@ -43,7 +43,7 @@ export class Dispatcher<T extends IDLType, Keys extends keyof T = never> {
         })
     }
 
-    public build(dispatch: Dispatch<FSA<string>>): { [Key in Keys]: DispatcherType<T[Key]> } {
+    public build(dispatch: Dispatch<FSA<string>>): { [Key in Keys]: DispatchFunctionType<T[Key]> } {
         return Object.entries(this.dispatcher).reduce((acc, [key, func]) => {
             return {
                 ...acc,
@@ -52,6 +52,8 @@ export class Dispatcher<T extends IDLType, Keys extends keyof T = never> {
         }, Object.create(null))
     }
 }
+
+export type DispatcherType<D> =  D extends Dispatcher<infer T, infer Keys> ? { [Key in Keys]: DispatchFunctionType<T[Key]> } : never
 
 type ReducerCallbackType<IDL, State> =
     IDL extends (null | undefined | void) ? (state: State, payload?: undefined, error?: boolean, meta?: any) => State

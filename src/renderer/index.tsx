@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDom from "react-dom"
-import { Top } from "./top/Top"
+import { Top } from "./mapviewer/Top"
 
 ReactDom.render(
     <Top />,
