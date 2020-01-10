@@ -5,7 +5,7 @@ export const defaultAppConfig = {
         name: "sakuramaru",
         configFileName: "sakuramaru.json",
         mapDir: "map",
-        mapInfo: "mapinfo.json"
+        mapData: "mapData.json"
     },
     windowOptions: {
         width: 1200,

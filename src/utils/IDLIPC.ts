@@ -1,5 +1,5 @@
 import { ipcMain, IpcMainEvent, IpcMainInvokeEvent, ipcRenderer, IpcRendererEvent } from "electron"
-import { IDLType } from "./IDL"
+import { IDLType, SuccessType } from "./IDL"
 import { PromiseUnion, Unpromise } from "./tsUtils"
 
 type ListenerType<T, EventType> = T extends null | undefined | void ? (event: EventType) => void
@@ -15,7 +15,7 @@ type SendArgsType<T> = T extends null | undefined | void ? []
 
 type HandlerType<T, EventType> = T extends (...args: any[]) => any ?  (event: EventType, ...args: Parameters<T>) => PromiseUnion<ReturnType<T>> : never
 
-type InvokeReturnType<T> = T extends (...args: any[]) => any ? Unpromise<ReturnType<T>> : never
+type InvokeReturnType<T> = T extends (...args: any[]) => any ? SuccessType<Unpromise<ReturnType<T>>> : never
 
 export function getTypedIpcMain <T extends IDLType>() {
     return {

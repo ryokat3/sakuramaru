@@ -3,11 +3,11 @@ import InputLabel from "@material-ui/core/InputLabel"
 import MenuItem from "@material-ui/core/MenuItem"
 import Select from "@material-ui/core/Select"
 import React from "react"
-import { MapInfoType } from "../../MapInfo"
+import { MapDataType } from "../../MapData"
 import { TopContext } from "./Top"
 
 export interface MapSelectorProps {
-    mapInfo?: MapInfoType
+    mapData: MapDataType
     mapFile?: string
 }
 
@@ -17,7 +17,7 @@ export const MapSelector: React.FunctionComponent<MapSelectorProps> = (props: Ma
         <FormControl className={context.style.formControl}>
             <InputLabel>Map</InputLabel>
             <Select value={props.mapFile} onChange={(e) => context.dispatcher.selectMap(e.target.value as string)}>
-                { (props.mapInfo !== undefined) ? Object.entries(props.mapInfo).map(([key, value]) => <MenuItem value={key}>{value?.description || key}</MenuItem>) : <></> }
+                { Object.entries(props.mapData).map(([key, value]) => <MenuItem value={key}>{value?.description || key}</MenuItem>) }
             </Select>
         </FormControl>
     }</TopContext.Consumer>

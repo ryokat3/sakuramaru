@@ -41,6 +41,6 @@ export const Top: React.FunctionComponent<{}> = () => {
 
     return <TopContext.Provider value={context}>
         <div><h1>{state.appConfig?.app.name}</h1></div>
-        <MapSelector mapInfo={state.mapInfo} mapFile={state.mapFile}></MapSelector>
+        <MapSelector mapData={state.mapInfo} mapFile={state.mapFile}></MapSelector>
     </TopContext.Provider>
 }

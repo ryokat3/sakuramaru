@@ -4,7 +4,7 @@ import { App, app, BrowserWindow, BrowserWindowConstructorOptions } from "electr
 import * as fs from "fs"
 import * as path from "path"
 import { AppConfig, defaultAppConfig } from "./AppConfig"
-import { readMapInfo } from "./MapInfo"
+import { readMapData } from "./MapData"
 import { TopIDL } from "./renderer/mapviewer/TopIDL"
 import { getRuntimeInfo, RuntimeInfo } from "./RuntimeInfo"
 import { getTypedIpcMain } from "./utils/IDLIPC"
@@ -39,7 +39,7 @@ function initIpc(runtimeInfo: RuntimeInfo, appConfig: AppConfig) {
     const ipc = getTypedIpcMain<TopIDL>()
 
     ipc.handle("getAppConfig", () => appConfig)
-    ipc.handle("getMapInfo", () => readMapInfo(runtimeInfo, appConfig))
+    ipc.handle("getMapInfo", () => readMapData(runtimeInfo, appConfig))
 }
 
 function createWindow(url: string, windowOptions: BrowserWindowConstructorOptions) {

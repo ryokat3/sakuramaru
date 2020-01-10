@@ -1,8 +1,10 @@
 import { AppConfig } from "../../AppConfig"
-import { MapInfoType } from "../../MapInfo"
+import { MapDataType } from "../../MapData"
 
 export interface TopIDL {
     getAppConfig: () => Promise<AppConfig>,
-    getMapInfo: () => Promise<MapInfoType>,
+    getMapInfo: () => Promise<MapDataType>,
+    getMap:(fileName:string) => Promise<Blob>
+
     selectMap: string
 }
