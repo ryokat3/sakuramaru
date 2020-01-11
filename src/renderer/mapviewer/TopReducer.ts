@@ -1,33 +1,31 @@
-import { AppConfig } from "../../AppConfig"
 import { MapDataType } from "../../MapData"
 import { Reducer } from "../../utils/IDLFlux"
 import { TopIDL } from "./TopIDL"
+import { defaultAppConfig } from "../AppConfig"
+
 
 export const initialTopState = {
-    appConfig: undefined as AppConfig | undefined,
+    appConfig: defaultAppConfig,
     mapInfo: Object.create(null) as MapDataType,
-    mapFile: undefined as string | undefined
+    selectedMap: undefined as string | undefined
 }
 
 export type TopStateType = typeof initialTopState
 
 export const topReducer = new Reducer<TopIDL, TopStateType>()
-    .add("getAppConfig", (state: typeof initialTopState, appConfig: AppConfig) => {
+    .add("getMapInfo", (state, response) => {
         return {
             ...state,
-            appConfig
+            mapInfo: response.payload
         }
     })
-    .add("getMapInfo", (state: TopStateType, mapInfo: MapDataType) => {
-        return {
-            ...state,
-            mapInfo
-        }
+    .addError("getMapInfo", (state)=> {
+        return state
     })
-    .add("selectMap", (state: TopStateType, mapFile: string) => {
+    .add("selectMap", (state, mapFile) => {
         return {
             ...state,
-            mapFile
+            selectedMap: mapFile
         }
     })
     .build()

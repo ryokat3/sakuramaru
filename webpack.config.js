@@ -2,6 +2,7 @@ const path = require('path')
 const package_json = require('./package.json')
 const fs = require('fs')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin')
 
 class CopyPackageJsonPlugin {
     constructor(filePath, template) {
@@ -107,9 +108,12 @@ const rendererConfig = {
         new HtmlWebpackPlugin({
             title: "Electron Template",
             filename: 'index.html',
-            template: 'html/index.html'
-        })
+            template: 'html/index.html',
+            inlineSource: '.(js|css)$' // HtmlWebpackInlineSourcePlugin
+        }),
+      new HtmlWebpackInlineSourcePlugin()
     ]
 }
 
-module.exports = [rendererConfig, mainConfig]
+// module.exports = [rendererConfig, mainConfig]
+module.exports = [ rendererConfig ]

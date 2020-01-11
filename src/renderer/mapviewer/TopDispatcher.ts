@@ -1,12 +1,9 @@
 import { Dispatcher, DispatcherType } from "../../utils/IDLFlux"
-import { getTypedIpcRenderer } from "../../utils/IDLIPC"
+import { rest } from "../../utils/IDLRest"
 import { TopIDL } from "./TopIDL"
 
-const ipc = getTypedIpcRenderer<TopIDL>()
-
-export const topDispatcher = new Dispatcher<TopIDL>()
-    .addAsyncAction("getAppConfig", async () => ipc.invoke("getAppConfig"))
-    .addAsyncAction("getMapInfo", async () => ipc.invoke("getMapInfo"))
+export const topDispatcher = new Dispatcher<TopIDL>()    
+    .addAsyncAction("getMapInfo", async (mapInfoPath:string) => await rest(mapInfoPath, { method: "GET", cache: "no-cache", credentials: "include" }))
     .addParameterAction("selectMap")
 
 export type TopDispatcherType = DispatcherType<typeof topDispatcher>

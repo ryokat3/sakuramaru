@@ -25,22 +25,21 @@ export interface TopContextType {
 export const TopContext = createContext<TopContextType>(Object.create(null))
 
 export const Top: React.FunctionComponent<{}> = () => {
-    const [state, dispatch] = React.useReducer(topReducer, initialTopState)
+    const [state, dispatch]= React.useReducer(topReducer, initialTopState)
     const dispatcher = topDispatcher.build(dispatch)
     const style = useStyles()
-
-    useEffect(() => {
-        dispatcher.getAppConfig()
-        dispatcher.getMapInfo()
+    
+    useEffect(() => {        
+        dispatcher.getMapInfo(`${state.appConfig.mapDir}/${state.appConfig.mapData}`)
     }, [])
 
     const context = {
         dispatcher,
         style
-    }
+    }    
 
     return <TopContext.Provider value={context}>
-        <div><h1>{state.appConfig?.app.name}</h1></div>
-        <MapSelector mapData={state.mapInfo} mapFile={state.mapFile}></MapSelector>
+        <div><h1>{state.appConfig.name}</h1></div>
+        <MapSelector mapData={state.mapInfo} mapFile={state.selectedMap}></MapSelector>
     </TopContext.Provider>
 }

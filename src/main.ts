@@ -37,9 +37,8 @@ async function initApp(app: App): Promise<void> {
 
 function initIpc(runtimeInfo: RuntimeInfo, appConfig: AppConfig) {
     const ipc = getTypedIpcMain<TopIDL>()
-
-    ipc.handle("getAppConfig", () => appConfig)
-    ipc.handle("getMapInfo", () => readMapData(runtimeInfo, appConfig))
+    
+    // ipc.handle("getMapInfo", () => readMapData(runtimeInfo, appConfig))
 }
 
 function createWindow(url: string, windowOptions: BrowserWindowConstructorOptions) {

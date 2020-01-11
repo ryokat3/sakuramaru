@@ -17,7 +17,7 @@ export const MapSelector: React.FunctionComponent<MapSelectorProps> = (props: Ma
         <FormControl className={context.style.formControl}>
             <InputLabel>Map</InputLabel>
             <Select value={props.mapFile} onChange={(e) => context.dispatcher.selectMap(e.target.value as string)}>
-                { Object.entries(props.mapData).map(([key, value]) => <MenuItem value={key}>{value?.description || key}</MenuItem>) }
+                { Object.entries(props.mapData).map(([key, value]) => <MenuItem key={key} value={key}>{value?.description || key}</MenuItem>) }
             </Select>
         </FormControl>
     }</TopContext.Consumer>

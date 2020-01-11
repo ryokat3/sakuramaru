@@ -1,6 +1,6 @@
 {
   "name": "sakuramaru",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "3D Aerial Photograph Viewer",
   "main": "main.js",
   "scripts": {
@@ -49,6 +49,7 @@
     "copy-pkg": "^1.0.0",
     "cross-env": "^6.0.3",
     "electron-builder": "^21.2.0",
+    "html-webpack-inline-source-plugin": "0.0.10",
     "html-webpack-plugin": "^3.2.0",
     "mocha": "^6.2.2",
     "shx": "^0.3.2",
