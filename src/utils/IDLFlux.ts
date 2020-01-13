@@ -49,10 +49,13 @@ export class Dispatcher<T extends IDLType, Keys extends keyof T = never> {
         })
     }
 
-    public addAsyncAction<Key extends keyof SelectObject<{ [LtdKey in Exclude<keyof T, Keys>]: T[LtdKey] }, (...args: any[]) => Promise<any>>>(key: Key, func: (...args:Parameters<T[Key]>)=>Promise<ToEither<Unpromise<ReturnType<T[Key]>>>>) {
+    public addAsyncAction<Key extends keyof SelectObject<{ [LtdKey in Exclude<keyof T, Keys>]: T[LtdKey] }, (...args: any[]) => Promise<any>>>(
+        key: Key,
+        func: (...args:Parameters<T[Key]>)=>Promise<ToEither<Unpromise<ReturnType<T[Key]>>>>
+    ) {
         return new Dispatcher<T, Keys|Key>({
             ...this.dispatcher,
-            [key]: (dispatch: Dispatch<FSA<string, unknown>>) => async (...args: Parameters<T[Key]>) => {
+            [key]: (dispatch: Dispatch<FSA<string, unknown>>) => async (...args: Parameters<T[Key]>) => {                
                 const payload = await func(...args)
                 if (isLeft(payload)) {
                     dispatch({ type: key as string, payload: payload.left, error: true })

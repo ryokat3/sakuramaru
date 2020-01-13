@@ -1,6 +1,6 @@
 {
   "name": "sakuramaru",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "3D Aerial Photograph Viewer",
   "main": "main.js",
   "scripts": {

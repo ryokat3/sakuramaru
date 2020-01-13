@@ -4,10 +4,7 @@ import { App, app, BrowserWindow, BrowserWindowConstructorOptions } from "electr
 import * as fs from "fs"
 import * as path from "path"
 import { AppConfig, defaultAppConfig } from "./AppConfig"
-import { readMapData } from "./MapData"
-import { TopIDL } from "./renderer/mapviewer/TopIDL"
 import { getRuntimeInfo, RuntimeInfo } from "./RuntimeInfo"
-import { getTypedIpcMain } from "./utils/IDLIPC"
 
 function getCommandLineParse(appConfig: AppConfig) {
     return new Command(appConfig.app.name).option("--config <config>", "Config file", appConfig.app.configFileName)
@@ -35,12 +32,6 @@ async function initApp(app: App): Promise<void> {
     })
 }
 
-function initIpc(runtimeInfo: RuntimeInfo, appConfig: AppConfig) {
-    const ipc = getTypedIpcMain<TopIDL>()
-    
-    // ipc.handle("getMapInfo", () => readMapData(runtimeInfo, appConfig))
-}
-
 function createWindow(url: string, windowOptions: BrowserWindowConstructorOptions) {
     const win = new BrowserWindow(windowOptions)
 
@@ -53,7 +44,6 @@ function createWindow(url: string, windowOptions: BrowserWindowConstructorOption
 async function init(runtimeInfo: RuntimeInfo) {
     const appConfig = initAppConfig(runtimeInfo, defaultAppConfig)
     await initApp(app)
-    initIpc(runtimeInfo, appConfig)
 
     const win = createWindow(`file://${__dirname}/index.html`, appConfig.windowOptions)
 

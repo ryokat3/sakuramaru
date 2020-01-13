@@ -82,7 +82,7 @@ const rendererConfig = {
     entry: path.join(__dirname, 'src', 'renderer', 'index'),
     output: {
         filename: 'index.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname)
     },
     resolve: {
         extensions: ['.json', '.js', '.jsx', '.css', '.ts', '.tsx']

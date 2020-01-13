@@ -30,7 +30,7 @@ export const Top: React.FunctionComponent<{}> = () => {
     const style = useStyles()
     
     useEffect(() => {        
-        dispatcher.getMapInfo(`${state.appConfig.mapDir}/${state.appConfig.mapData}`)
+        dispatcher.getMapInfo(state.appConfig)
     }, [])
 
     const context = {
