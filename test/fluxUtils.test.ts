@@ -1,8 +1,7 @@
 import * as chai from "chai"
-import { right, left } from "fp-ts/lib/Either"
+import { left, right } from "fp-ts/lib/Either"
 import { SuccessOrError } from "../src/utils/IDL"
 import { Dispatcher, Reducer } from "../src/utils/IDLFlux"
-
 
 interface ActionDesign {
     "async": (val1: string, val2: number) => Promise<string>,
@@ -10,8 +9,8 @@ interface ActionDesign {
     "noparam": void,
     "paramBool": boolean,
     "paramString": string,
-    "either": ()=>SuccessOrError<string, number>
-    "eitherPromise": ()=>Promise<SuccessOrError<string, number>>
+    "either": () => SuccessOrError<string, number>
+    "eitherPromise": () => Promise<SuccessOrError<string, number>>
 }
 
 describe("flusUtils", () => {
@@ -30,28 +29,28 @@ describe("flusUtils", () => {
         const dispatcher = new Dispatcher<ActionDesign>()
             .addAction("noparam")
             .addAsyncAction("async", async (val1: string, val2: number) => `${val1}${val2}`)
-            .addSyncAction("sync", (val1: string) => val1)            
+            .addSyncAction("sync", (val1: string) => val1)
             .addParameterAction("paramBool")
             .addParameterAction("paramString")
-            .addSyncAction("either", ()=>right('hello'))
-            .addAsyncAction("eitherPromise", async ()=>left(10))
+            .addSyncAction("either", () => right("hello"))
+            .addAsyncAction("eitherPromise", async () => left(10))
         const keys = Array.from(Object.keys(dispatcher.build(undefined as any)))
 
         chai.assert.equal(keys.length, 7)
     })
 
-    it("Reducer Either", ()=>{
+    it("Reducer Either", () => {
         const reducer = new Reducer<ActionDesign, string>()
-            .add("either", (state: string, value:string) => `${state}_${value}`)            
-            .addError("either", (state:string, value:number)=>`${state}_${value + 1}`)
-            .add("eitherPromise", (state: string, value:string) => `${state}_${value}`)
-            .addError("eitherPromise", (state:string, value:number)=>`${state}_${value + 1}`)
+            .add("either", (state: string, value: string) => `${state}_${value}`)
+            .addError("either", (state: string, value: number) => `${state}_${value + 1}`)
+            .add("eitherPromise", (state: string, value: string) => `${state}_${value}`)
+            .addError("eitherPromise", (state: string, value: number) => `${state}_${value + 1}`)
             .build()
 
-        chai.assert.equal(reducer("Hello", { type: "either", payload: "true" }), "Hello_true")      
+        chai.assert.equal(reducer("Hello", { type: "either", payload: "true" }), "Hello_true")
         chai.assert.equal(reducer("Hello", { type: "either", payload: 10, error: true }), "Hello_11")
 
-        chai.assert.equal(reducer("Hello", { type: "eitherPromise", payload: "true" }), "Hello_true")      
+        chai.assert.equal(reducer("Hello", { type: "eitherPromise", payload: "true" }), "Hello_true")
         chai.assert.equal(reducer("Hello", { type: "eitherPromise", payload: 10, error: true }), "Hello_11")
-    })    
+    })
 })

@@ -3,16 +3,16 @@ import * as path from "path"
 import { AppConfig } from "./AppConfig"
 import { RuntimeInfo } from "./RuntimeInfo"
 
-type Point = {
+interface Point {
     x: number
-    y: number    
+    y: number
 }
 
 export interface MapDataType {
     [fileName: string]: {
         description?: string
         rightMap?: string
-        points: { inThis: Point, inRight: Point } []
+        points: Array<{ inThis: Point, inRight: Point }>
     }
 }
 
