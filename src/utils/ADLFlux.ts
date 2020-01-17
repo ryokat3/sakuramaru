@@ -2,33 +2,42 @@ import { FilterObject, SelectObject } from "boost-ts"
 import { FSA } from "flux-standard-action"
 import { Either, isLeft, isRight } from "fp-ts/lib/Either"
 import { Dispatch } from "react"
-import { ErrorType, IDLType, SuccessOrError, SuccessType } from "./IDL"
+import { ADL, ErrorType, Payload, ValueType } from "./ADL"
 import { PromiseUnion, Unpromise } from "./tsUtils"
 
-type DispatchFunctionType<IDL> =
-    IDL extends (null | undefined | void | never) ? (() => void)
-        : IDL extends ((...args: any[]) => Promise<any>) ? ((...args: Parameters<IDL>) => Promise<void>)
-        : IDL extends ((...args: any[]) => any) ? ((...args: Parameters<IDL>) => void)
-        : ((value: IDL) => void)
 
-type ToEither<T> = T extends SuccessOrError<unknown, unknown> ? Either<ErrorType<T>, SuccessType<T>> : T
+////////////////////////////////////////////////////////////////////////
+/// Dispatcher
+////////////////////////////////////////////////////////////////////////
 
-export class Dispatcher<T extends IDLType, Keys extends keyof T = never> {
+type DispatchArgsType<T extends ADL> = T extends Payload<void|null|undefined|never, unknown> ? []
+        : T extends Payload<unknown, unknown> ? [ ValueType<T> ]
+        : T extends (...args:Array<any>)=>unknown ? Parameters<T>
+        : never
+
+
+type DispatchReterunType<T extends ADL> = T extends ((...args: Array<any>) => Promise<any>) ? Promise<void> : void        
+        
+type DispatchFunctionType<T extends ADL> = (...args:DispatchArgsType<T>)=>DispatchReterunType<T>
+
+type ToEither<T> = T extends Payload<unknown, never> ? ValueType<T> : T extends Payload<unknown, unknown> ? Either<ErrorType<T>, ValueType<T>> : never
+
+export class Dispatcher<T extends { [type:string]:ADL }, Keys extends keyof T = never> {
     constructor(
         private readonly dispatcher: { [Key in keyof T]: (dispatch: Dispatch<FSA<string>>) => DispatchFunctionType<T[Key]> } = Object.create(null)
     ) {}
 
-    public addAction<Key extends keyof SelectObject<{ [LtdKey in Exclude<keyof T, Keys>]: T[LtdKey] }, null | undefined | void >>(key: Key) {
+    public addAction<Key extends keyof SelectObject<{ [LtdKey in Exclude<keyof T, Keys>]: T[LtdKey] }, Payload<void|unknown|undefined|never>>>(key: Key) {
         return new Dispatcher<T, Keys|Key>({
             ...this.dispatcher,
             [key]: (dispatch: Dispatch<FSA<string>>) => () => dispatch({ type: key as string })
         })
     }
 
-    public addParameterAction<Key extends keyof FilterObject<{ [LtdKey in Exclude<keyof T, Keys>]: T[LtdKey] }, ((...args: any[]) => any) >>(key: Key) {
+    public addParameterAction<Key extends keyof FilterObject<{ [LtdKey in Exclude<keyof T, Keys>]: T[LtdKey] }, ((...args: Array<any>)=>any) >>(key: Key) {
         return new Dispatcher<T, Keys|Key>({
             ...this.dispatcher,
-            [key]: (dispatch: Dispatch<FSA<string>>) => (payload: T[Key]) => dispatch({ type: key as string, payload })
+            [key]: (dispatch: Dispatch<FSA<string, unknown>>) => (payload: ValueType<T[Key]>) => dispatch({ type: key as string, payload: payload })
         })
     }
 
@@ -70,7 +79,7 @@ export class Dispatcher<T extends IDLType, Keys extends keyof T = never> {
         })
     }
 
-    public build(dispatch: Dispatch<FSA<string>>): { [Key in Keys]: DispatchFunctionType<T[Key]> } {
+    public build(dispatch: Dispatch<FSA<string>>): { [Key in Keys]: DispatchFunctionType<T[Key]> } {    
         return Object.entries(this.dispatcher).reduce((acc, [key, func]) => {
             return {
                 ...acc,
@@ -82,30 +91,35 @@ export class Dispatcher<T extends IDLType, Keys extends keyof T = never> {
 
 export type DispatcherType<D> =  D extends Dispatcher<infer T, infer Keys> ? { [Key in Keys]: DispatchFunctionType<T[Key]> } : never
 
-type ReducerCallbackType<IDL, State> =
-    IDL extends (null | undefined | void) ? ((state: State, payload?: undefined, error?: boolean, meta?: any) => State)
-        : IDL extends (...args: any[]) => PromiseUnion<SuccessOrError<any, any>> ? ((state: State, result: SuccessType<Unpromise<ReturnType<IDL>>>, error?: boolean, meta?: any) => State)
-        : IDL extends (...args: any[]) => any ? ((state: State, result: Unpromise<ReturnType<IDL>>, error?: boolean, meta?: any) => State)
-        : ((state: State, value: IDL, error?: boolean, meta?: any) => State)
+////////////////////////////////////////////////////////////////////////
+/// Reducer
+////////////////////////////////////////////////////////////////////////
 
-type ReducerErrorCallbackType<IDL, State> =
-    IDL extends ((...args: any[]) => PromiseUnion<SuccessOrError<any, any>>) ? (((state: State, result: ErrorType<Unpromise<ReturnType<IDL>>>, error?: boolean, meta?: any) => State)) : never
+type ReducerPayloadType<T extends ADL> = T extends Payload<void|null|undefined|never, unknown> ? never
+        : T extends Payload<unknown, unknown> ? ValueType<T>
+        : T extends (...args:Array<any>)=>PromiseUnion<Payload<any, any>> ? ValueType<Unpromise<ReturnType<T>>>
+        : never
 
-type ErrorKeysList<T extends IDLType> = keyof SelectObject<T, (...args: any[]) => PromiseUnion<SuccessOrError<any, any>>>
+type ReducerErrorPayloadType<T extends ADL> =
+    T extends ((...args: any[]) => PromiseUnion<Payload<any, any>>) ? ErrorType<Unpromise<ReturnType<T>>> : never
 
-export class Reducer<T extends IDLType,
+type ReducerCallbackType<State, PayloadType> = (state:State, payload:PayloadType, error?:boolean, meta?:any)=>State
+
+type ErrorKeysList<T extends { [type:string]:ADL }> = keyof SelectObject<T, (...args: any[]) => PromiseUnion<Payload<any, any>>>
+
+export class Reducer<T extends { [type:string]:ADL },
         State,
         Keys extends keyof T = never,
         ErrorKeys extends ErrorKeysList<T> = never
 > {
     constructor(
-        private readonly reducer: { [Key in keyof T]: ReducerCallbackType<T[Key], State> } = Object.create(null),
-        private readonly errorReducer: { [Key in keyof T]: ReducerErrorCallbackType<T[Key], State> } = Object.create(null)
+        private readonly reducer: { [Key in keyof T]: ReducerCallbackType<State, ReducerPayloadType<T[Key]>> } = Object.create(null),
+        private readonly errorReducer: { [Key in keyof T]: ReducerCallbackType<State, ReducerErrorPayloadType<T[Key]>> } = Object.create(null)
     ) {}
 
     public add<Key extends Exclude<keyof T, Keys>>(
         key: Key,
-        callback: ReducerCallbackType<T[Key], State>
+        callback: ReducerCallbackType<State, ReducerPayloadType<T[Key]>>
     ) {
         return new Reducer<T, State, Keys|Key, ErrorKeys>({
             ...this.reducer,
@@ -115,7 +129,7 @@ export class Reducer<T extends IDLType,
 
     public addError<ErrorKey extends Exclude<ErrorKeysList<T>, ErrorKeys> & ErrorKeysList<T>>(
         key: ErrorKey,
-        errorCallback: ReducerErrorCallbackType<T[ErrorKey], State>
+        errorCallback: ReducerCallbackType<State, ReducerErrorPayloadType<T[ErrorKey]>>
     ) {
         return new Reducer<T, State, Keys, ErrorKeys|ErrorKey>(this.reducer, {
             ...this.errorReducer,

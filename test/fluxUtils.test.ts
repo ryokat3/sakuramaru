@@ -1,19 +1,33 @@
 import * as chai from "chai"
 import { left, right } from "fp-ts/lib/Either"
-import { SuccessOrError } from "../src/utils/IDL"
-import { Dispatcher, Reducer } from "../src/utils/IDLFlux"
+import { Payload } from "../src/utils/ADL"
+import { Dispatcher, Reducer } from "../src/utils/ADLFlux"
 
-interface ActionDesign {
-    "async": (val1: string, val2: number) => Promise<string>,
-    "sync": (val: string) => string,
-    "noparam": void,
-    "paramBool": boolean,
-    "paramString": string,
-    "either": () => SuccessOrError<string, number>
-    "eitherPromise": () => Promise<SuccessOrError<string, number>>
+type ActionDesign = {
+    "async": (val1: string, val2: number) => Promise<Payload<string>>,
+    "sync": (val: string) => Payload<string>,
+    "noparam": Payload<void>,
+    "paramBool": Payload<boolean>,
+    "paramString": Payload<string>,
+    "either": () => Payload<string, number>
+    "eitherPromise": () => Promise<Payload<string, number>>
 }
 
 describe("flusUtils", () => {
+    it("action with parameter", ()=>{
+        
+        const dispatcher = new Dispatcher<ActionDesign>()
+            .addAction("noparam")
+            .addAsyncAction("async", async (val1: string, val2: number) => `${val1}${val2}`)
+            .addSyncAction("sync", (val1: string) => val1)
+            .addParameterAction("paramBool")
+            .addParameterAction("paramString")
+            .addSyncAction("either", () => right("hello"))
+            .addAsyncAction("eitherPromise", async () => left(10))
+            .build((x)=>x)
+        
+        chai.assert.equal(Object.keys(dispatcher).length, 7)            
+    })    
     it("Reducer basic", () => {
 
         const reducer = new Reducer<ActionDesign, string>()
@@ -34,8 +48,10 @@ describe("flusUtils", () => {
             .addParameterAction("paramString")
             .addSyncAction("either", () => right("hello"))
             .addAsyncAction("eitherPromise", async () => left(10))
-        const keys = Array.from(Object.keys(dispatcher.build(undefined as any)))
-
+            .build((x)=>x)
+            
+        const keys = Array.from(Object.keys(dispatcher))
+        
         chai.assert.equal(keys.length, 7)
     })
 

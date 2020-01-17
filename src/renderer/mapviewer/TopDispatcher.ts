@@ -1,7 +1,7 @@
 import { pipe } from "fp-ts/lib/pipeable"
 import * as TE from "fp-ts/lib/TaskEither"
 import { MapDataType } from "../../MapData"
-import { Dispatcher, DispatcherType } from "../../utils/IDLFlux"
+import { Dispatcher, DispatcherType } from "../../utils/ADLFlux"
 import { getRestTE, liftRestTE  } from "../../utils/RestTaskEither"
 import { AppConfig } from "../AppConfig"
 import { TopIDL } from "./TopIDL"
@@ -27,8 +27,12 @@ export const topDispatcher = new Dispatcher<TopIDL>()
                 blob: await response.blob()    
             }    
         }))                    
-    )())
+    )())    
     .addParameterAction("selectMap")
+    .addParameterAction("gripMap")
+    .addParameterAction("moveMap")    
+    .addAction("ungripMap")
+    .addParameterAction("switchSync")
 
 export type TopDispatcherType = DispatcherType<typeof topDispatcher>
 

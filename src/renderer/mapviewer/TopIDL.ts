@@ -1,10 +1,16 @@
 import { MapDataType } from "../../MapData"
-import { SuccessOrError } from "../../utils/IDL"
+import { Payload } from "../../utils/ADL"
 import { AppConfig } from "../AppConfig"
+import { GripType } from "./TopReducer"
 
-export interface TopIDL {
-    getMapInfo: (appConfig: AppConfig) => Promise<SuccessOrError<MapDataType, unknown>> ,
-    getMap: (appConfig: AppConfig, fileName: string) => Promise<SuccessOrError<{ fileName: string, blob: Blob }, unknown>>
 
-    selectMap: string
+export type TopIDL = {
+    getMapInfo: (appConfig: AppConfig) => Promise<Payload<MapDataType, unknown>>,
+    getMap: (appConfig: AppConfig, fileName: string) => Promise<Payload<{ fileName: string, blob: Blob }, unknown>>,
+    
+    gripMap: Payload<GripType>,
+    ungripMap: Payload<void>,
+    moveMap: Payload<[number, number]>,
+    selectMap: Payload<string>,
+    switchSync: Payload<boolean>
 }

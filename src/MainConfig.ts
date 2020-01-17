@@ -1,12 +1,8 @@
 import { BrowserWindowConstructorOptions } from "electron"
+import { defaultAppConfig } from "./renderer/AppConfig"
 
-export const defaultAppConfig = {
-    app: {
-        name: "sakuramaru",
-        configFileName: "sakuramaru.json",
-        mapDir: "map",
-        mapData: "mapData.json"
-    },
+export const defaultMainConfig = {
+    app: defaultAppConfig,
     windowOptions: {
         width: 1200,
         height: 800,
@@ -14,10 +10,11 @@ export const defaultAppConfig = {
         minHeight: 200,
         acceptFirstMouse: true,
         titleBarStyle: "hidden",
+        flame: false,
         webPreferences: {
             nodeIntegration: true
         }
     } as BrowserWindowConstructorOptions
 }
 
-export type AppConfig = typeof defaultAppConfig
+export type MainConfig = typeof defaultMainConfig
