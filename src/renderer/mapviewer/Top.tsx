@@ -6,6 +6,7 @@ import { MapViewer } from "./MapViewer"
 import { topDispatcher, TopDispatcherType } from "./TopDispatcher"
 import { initialTopState, topReducer } from "./TopReducer"
 import { MapPoints } from "./MapPoints"
+import { MapSyncSwiitch } from "./MapSyncSwitch"
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -57,5 +58,6 @@ export const Top: React.FunctionComponent<{}> = () => {
             />
         </div>
         <MapPoints topL={state.leftMapView.top} leftL={state.leftMapView.left} topR={state.rightMapView.top} leftR={state.rightMapView.left}></MapPoints>
+        <MapSyncSwiitch syncMapMove={state.syncMapMove} ></MapSyncSwiitch>
     </TopContext.Provider>
 }

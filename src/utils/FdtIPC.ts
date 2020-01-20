@@ -1,24 +1,23 @@
 import { ipcMain, IpcMainEvent, IpcMainInvokeEvent, ipcRenderer, IpcRendererEvent } from "electron"
-import { ADL, ValueType, Payload } from "./ADL"
+import { Fdt, ValueType, Payload } from "./Fdt"
 import { PromiseUnion, Unpromise } from "./tsUtils"
 
-type ListenerType<T extends ADL, EventType> = T extends Payload<null|undefined|void|never> ? ((event: EventType) => void)
-    : T extends (...args: any[]) => Payload<null|undefined|void|never> ? (event: EventType) => void
-    : T extends (...args: any[]) => PromiseUnion<Payload<unknown>> ?  (event: EventType, value: ValueType<Unpromise<ReturnType<T>>>) => void
-    : T extends Payload<Array<any>> ? (event: EventType, ...args: ValueType<T>) => void
+type ListenerType<T extends Fdt, EventType> = T extends Payload<null|undefined|void|never> ? ((event: EventType) => void)
     : T extends Payload<any> ? (event: EventType, arg: ValueType<T>) => void
+    : T extends (...args: any[]) => PromiseUnion<Payload<null|undefined|void|never>> ? (event: EventType) => void
+    : T extends (...args: any[]) => PromiseUnion<Payload<unknown>> ?  (event: EventType, value: ValueType<Unpromise<ReturnType<T>>>) => void    
     : never
 
-type SendArgsType<T extends ADL> = T extends Payload<null|undefined|void|never> ? []
+type SendArgsType<T extends Fdt> = T extends Payload<null|undefined|void|never> ? []
     : T extends (...args: any[]) => Payload<any> ?  Parameters<T>
     : T extends any[] ? T
     : [ T ]
 
-type HandlerType<T extends ADL, EventType> = T extends (...args: any[]) => any ?  (event: EventType, ...args: Parameters<T>) => PromiseUnion<ReturnType<T>> : never
+type HandlerType<T extends Fdt, EventType> = T extends (...args: any[]) => any ?  (event: EventType, ...args: Parameters<T>) => PromiseUnion<ReturnType<T>> : never
 
-type InvokeReturnType<T extends ADL> = T extends ((...args: any[]) => PromiseUnion<Payload<unknown>>) ? ValueType<Unpromise<ReturnType<T>>> : never
+type InvokeReturnType<T extends Fdt> = T extends ((...args: any[]) => PromiseUnion<Payload<unknown>>) ? ValueType<Unpromise<ReturnType<T>>> : never
 
-export function getTypedIpcMain <T extends { [type:string]:ADL }>() {
+export function getTypedIpcMain <T extends { [type:string]:Fdt }>() {
     return {
         // Listener functions
         on: <Channel extends Extract<keyof T, string> > (
@@ -33,6 +32,7 @@ export function getTypedIpcMain <T extends { [type:string]:ADL }>() {
             channel: Channel,
             listener: ListenerType<T[Channel], IpcMainEvent>
         ) => ipcMain.removeListener(channel, listener),
+
         removeAllListeners: <Channel extends Extract<keyof T, string> > (
             ...channels: Channel[]
         ) => ipcMain.removeAllListeners(...channels),
@@ -52,7 +52,7 @@ export function getTypedIpcMain <T extends { [type:string]:ADL }>() {
     }
 }
 
-export function getTypedIpcRenderer <T extends { [type:string]:ADL }>() {
+export function getTypedIpcRenderer <T extends { [type:string]:Fdt }>() {
     return {
         // Listener functions
         on: <Channel extends Extract<keyof T, string>>(

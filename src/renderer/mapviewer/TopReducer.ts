@@ -1,5 +1,5 @@
 import { MapDataType } from "../../MapData"
-import { Reducer } from "../../utils/ADLFlux"
+import { Reducer } from "../../utils/FdtFlux"
 import { defaultAppConfig } from "../AppConfig"
 import { TopIDL } from "./TopIDL"
 
@@ -22,7 +22,7 @@ export const initialTopState = {
         top: 0,
         left: 0 
     },
-    syncMapMove: false
+    syncMapMove: true
 }
 
 export type TopStateType = typeof initialTopState

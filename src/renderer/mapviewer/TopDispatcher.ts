@@ -1,7 +1,7 @@
 import { pipe } from "fp-ts/lib/pipeable"
 import * as TE from "fp-ts/lib/TaskEither"
 import { MapDataType } from "../../MapData"
-import { Dispatcher, DispatcherType } from "../../utils/ADLFlux"
+import { Dispatcher, DispatcherType } from "../../utils/FdtFlux"
 import { getRestTE, liftRestTE  } from "../../utils/RestTaskEither"
 import { AppConfig } from "../AppConfig"
 import { TopIDL } from "./TopIDL"

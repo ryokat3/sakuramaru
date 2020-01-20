@@ -1,7 +1,7 @@
 import * as chai from "chai"
 import { left, right } from "fp-ts/lib/Either"
-import { Payload } from "../src/utils/ADL"
-import { Dispatcher, Reducer } from "../src/utils/ADLFlux"
+import { Payload } from "../src/utils/Fdt"
+import { Dispatcher, Reducer } from "../src/utils/FdtFlux"
 
 type ActionDesign = {
     "async": (val1: string, val2: number) => Promise<Payload<string>>,

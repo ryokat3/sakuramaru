@@ -1,5 +1,5 @@
 import { MapDataType } from "../../MapData"
-import { Payload } from "../../utils/ADL"
+import { Payload } from "../../utils/Fdt"
 import { AppConfig } from "../AppConfig"
 import { GripType } from "./TopReducer"
 

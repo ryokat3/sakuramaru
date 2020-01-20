@@ -1,4 +1,9 @@
-export type ADL = Payload<unknown,unknown> | ((...args:any[])=>Payload<unknown,unknown>) | ((...args:any[])=>Promise<Payload<unknown,unknown>> ) 
+export type FdtValue = Payload<unknown,unknown>
+export type FdtAsync = ((...args:any[])=>Promise<Payload<unknown,unknown>> ) 
+export type FdtSync = ((...args:any[])=>Payload<unknown,unknown>)
+
+export type Fdt = FdtValue | FdtSync | FdtAsync
+
 
 const success = Symbol("success")
 const error = Symbol("error")

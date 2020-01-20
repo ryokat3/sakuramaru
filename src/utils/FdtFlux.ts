@@ -2,7 +2,7 @@ import { FilterObject, SelectObject } from "boost-ts"
 import { FSA } from "flux-standard-action"
 import { Either, isLeft, isRight } from "fp-ts/lib/Either"
 import { Dispatch } from "react"
-import { ADL, ErrorType, Payload, ValueType } from "./ADL"
+import { Fdt, ErrorType, Payload, ValueType } from "./Fdt"
 import { PromiseUnion, Unpromise } from "./tsUtils"
 
 
@@ -10,19 +10,19 @@ import { PromiseUnion, Unpromise } from "./tsUtils"
 /// Dispatcher
 ////////////////////////////////////////////////////////////////////////
 
-type DispatchArgsType<T extends ADL> = T extends Payload<void|null|undefined|never, unknown> ? []
+type DispatchArgsType<T extends Fdt> = T extends Payload<void|null|undefined|never, unknown> ? []
         : T extends Payload<unknown, unknown> ? [ ValueType<T> ]
         : T extends (...args:Array<any>)=>unknown ? Parameters<T>
         : never
 
 
-type DispatchReterunType<T extends ADL> = T extends ((...args: Array<any>) => Promise<any>) ? Promise<void> : void        
+type DispatchReterunType<T extends Fdt> = T extends ((...args: Array<any>) => Promise<any>) ? Promise<void> : void        
         
-type DispatchFunctionType<T extends ADL> = (...args:DispatchArgsType<T>)=>DispatchReterunType<T>
+type DispatchFunctionType<T extends Fdt> = (...args:DispatchArgsType<T>)=>DispatchReterunType<T>
 
 type ToEither<T> = T extends Payload<unknown, never> ? ValueType<T> : T extends Payload<unknown, unknown> ? Either<ErrorType<T>, ValueType<T>> : never
 
-export class Dispatcher<T extends { [type:string]:ADL }, Keys extends keyof T = never> {
+export class Dispatcher<T extends { [type:string]:Fdt }, Keys extends keyof T = never> {
     constructor(
         private readonly dispatcher: { [Key in keyof T]: (dispatch: Dispatch<FSA<string>>) => DispatchFunctionType<T[Key]> } = Object.create(null)
     ) {}
@@ -95,19 +95,19 @@ export type DispatcherType<D> =  D extends Dispatcher<infer T, infer Keys> ? { [
 /// Reducer
 ////////////////////////////////////////////////////////////////////////
 
-type ReducerPayloadType<T extends ADL> = T extends Payload<void|null|undefined|never, unknown> ? never
+type ReducerPayloadType<T extends Fdt> = T extends Payload<void|null|undefined|never, unknown> ? never
         : T extends Payload<unknown, unknown> ? ValueType<T>
         : T extends (...args:Array<any>)=>PromiseUnion<Payload<any, any>> ? ValueType<Unpromise<ReturnType<T>>>
         : never
 
-type ReducerErrorPayloadType<T extends ADL> =
+type ReducerErrorPayloadType<T extends Fdt> =
     T extends ((...args: any[]) => PromiseUnion<Payload<any, any>>) ? ErrorType<Unpromise<ReturnType<T>>> : never
 
 type ReducerCallbackType<State, PayloadType> = (state:State, payload:PayloadType, error?:boolean, meta?:any)=>State
 
-type ErrorKeysList<T extends { [type:string]:ADL }> = keyof SelectObject<T, (...args: any[]) => PromiseUnion<Payload<any, any>>>
+type ErrorKeysList<T extends { [type:string]:Fdt }> = keyof SelectObject<T, (...args: any[]) => PromiseUnion<Payload<any, any>>>
 
-export class Reducer<T extends { [type:string]:ADL },
+export class Reducer<T extends { [type:string]:Fdt },
         State,
         Keys extends keyof T = never,
         ErrorKeys extends ErrorKeysList<T> = never
