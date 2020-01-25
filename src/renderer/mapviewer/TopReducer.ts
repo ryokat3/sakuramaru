@@ -2,6 +2,7 @@ import { MapDataType } from "../../MapData"
 import { Reducer } from "../../utils/FdtFlux"
 import { defaultAppConfig } from "../AppConfig"
 import { TopIDL } from "./TopIDL"
+import { getSyncPoints, moveLeftMap, moveRightMap, calibrateLeftMap, calibrateRightMap } from "./MapCalibrator"
 
 export type GripType = "left" | "right" | "none"
 
@@ -27,27 +28,8 @@ export const initialTopState = {
 
 export type TopStateType = typeof initialTopState
 
-function moveRightMap(state:TopStateType, movementX:number, movementY:number):TopStateType {
-    return {
-        ...state,
-        rightMapView: {
-            ...state.rightMapView,
-            top: Math.max(state.rightMapView.top - movementX, 0),
-            left: Math.max(state.rightMapView.left - movementY, 0),
-        }
-    }
-}
 
-function moveLeftMap(state:TopStateType, movementX:number, movementY:number):TopStateType {
-    return {
-        ...state,
-        leftMapView: {
-            ...state.leftMapView,
-            top: Math.max(state.leftMapView.top - movementX, 0),
-            left: Math.max(state.leftMapView.left - movementY, 0)
-        }
-    }
-}
+
 
 export const topReducer = new Reducer<TopIDL, TopStateType>()
     .add("getMapInfo", (state, mapInfo) => {
@@ -99,13 +81,20 @@ export const topReducer = new Reducer<TopIDL, TopStateType>()
         }    
     })
     .add("moveMap", (state, [movementX, movementY])=>{
-        console.log(`right:[${state.rightMapView.top}, ${state.rightMapView.left}], left:[${state.leftMapView.top, state.leftMapView.left}], move:[${movementX}, ${movementY}]`)    
+        const points = getSyncPoints(state)
+
         if (state.grip === "none") {
             return state
         }
-        else if (state.syncMapMove === true) {
+        else if ((state.syncMapMove === true) && (points.length == 0)) {
             return moveLeftMap(moveRightMap(state, movementX, movementY), movementX, movementY)  
         }
+        else if ((state.syncMapMove === true) && (state.grip === "left")) {
+            return calibrateRightMap(moveLeftMap(state, movementX, movementY))      
+        }
+        else if ((state.syncMapMove === true) && (state.grip === "right")) {
+            return calibrateLeftMap(moveRightMap(state, movementX, movementY))      
+        }     
         else if (state.grip === "left") {
             return moveLeftMap(state, movementX, movementY)
         }
