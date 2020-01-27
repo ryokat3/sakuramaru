@@ -1,11 +1,11 @@
 import { ipcMain, IpcMainEvent, IpcMainInvokeEvent, ipcRenderer, IpcRendererEvent } from "electron"
-import { Fdt, ValueType, Payload } from "./Fdt"
+import { Fdt, Payload, ValueType } from "./Fdt"
 import { PromiseUnion, Unpromise } from "./tsUtils"
 
 type ListenerType<T extends Fdt, EventType> = T extends Payload<null|undefined|void|never> ? ((event: EventType) => void)
     : T extends Payload<any> ? (event: EventType, arg: ValueType<T>) => void
     : T extends (...args: any[]) => PromiseUnion<Payload<null|undefined|void|never>> ? (event: EventType) => void
-    : T extends (...args: any[]) => PromiseUnion<Payload<unknown>> ?  (event: EventType, value: ValueType<Unpromise<ReturnType<T>>>) => void    
+    : T extends (...args: any[]) => PromiseUnion<Payload<unknown>> ?  (event: EventType, value: ValueType<Unpromise<ReturnType<T>>>) => void
     : never
 
 type SendArgsType<T extends Fdt> = T extends Payload<null|undefined|void|never> ? []
@@ -17,7 +17,7 @@ type HandlerType<T extends Fdt, EventType> = T extends (...args: any[]) => any ?
 
 type InvokeReturnType<T extends Fdt> = T extends ((...args: any[]) => PromiseUnion<Payload<unknown>>) ? ValueType<Unpromise<ReturnType<T>>> : never
 
-export function getTypedIpcMain <T extends { [type:string]:Fdt }>() {
+export function getTypedIpcMain <T extends { [type: string]: Fdt }>() {
     return {
         // Listener functions
         on: <Channel extends Extract<keyof T, string> > (
@@ -52,7 +52,7 @@ export function getTypedIpcMain <T extends { [type:string]:Fdt }>() {
     }
 }
 
-export function getTypedIpcRenderer <T extends { [type:string]:Fdt }>() {
+export function getTypedIpcRenderer <T extends { [type: string]: Fdt }>() {
     return {
         // Listener functions
         on: <Channel extends Extract<keyof T, string>>(

@@ -18,4 +18,4 @@ export function getRestTE(...args: Parameters<typeof fetch>) {
     )
 }
 
-export const liftRestTE = <A,B>(f:(a:A)=>Promise<B>) => (a:A) => async () => right<RestErrorType,B>(await f(a))
+export const liftRestTE = <A, B>(f: (a: A) => Promise<B>) => (a: A) => async () => right<RestErrorType, B>(await f(a))

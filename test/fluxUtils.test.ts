@@ -3,7 +3,7 @@ import { left, right } from "fp-ts/lib/Either"
 import { Payload } from "../src/utils/Fdt"
 import { Dispatcher, Reducer } from "../src/utils/FdtFlux"
 
-type ActionDesign = {
+interface ActionDesign {
     "async": (val1: string, val2: number) => Promise<Payload<string>>,
     "sync": (val: string) => Payload<string>,
     "noparam": Payload<void>,
@@ -14,8 +14,8 @@ type ActionDesign = {
 }
 
 describe("flusUtils", () => {
-    it("action with parameter", ()=>{
-        
+    it("action with parameter", () => {
+
         const dispatcher = new Dispatcher<ActionDesign>()
             .addAction("noparam")
             .addAsyncAction("async", async (val1: string, val2: number) => `${val1}${val2}`)
@@ -24,10 +24,10 @@ describe("flusUtils", () => {
             .addParameterAction("paramString")
             .addSyncAction("either", () => right("hello"))
             .addAsyncAction("eitherPromise", async () => left(10))
-            .build((x)=>x)
-        
-        chai.assert.equal(Object.keys(dispatcher).length, 7)            
-    })    
+            .build((x) => x)
+
+        chai.assert.equal(Object.keys(dispatcher).length, 7)
+    })
     it("Reducer basic", () => {
 
         const reducer = new Reducer<ActionDesign, string>()
@@ -48,10 +48,10 @@ describe("flusUtils", () => {
             .addParameterAction("paramString")
             .addSyncAction("either", () => right("hello"))
             .addAsyncAction("eitherPromise", async () => left(10))
-            .build((x)=>x)
-            
+            .build((x) => x)
+
         const keys = Array.from(Object.keys(dispatcher))
-        
+
         chai.assert.equal(keys.length, 7)
     })
 

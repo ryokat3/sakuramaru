@@ -1,6 +1,6 @@
 import React from "react"
 
-export interface MapPointsProps {        
+export interface MapPointsProps {
     topL: number,
     leftL: number,
     topR: number,
@@ -8,5 +8,5 @@ export interface MapPointsProps {
 }
 
 export const MapPoints: React.FunctionComponent<MapPointsProps> = (props: MapPointsProps) => {
-    return <div>{`[ ${props.topL}, ${props.leftL}, ${props.topR}, ${props.leftR} ]`}</div>    
-}    
+    return <div>{`[ ${Math.round(props.topL)}, ${Math.round(props.leftL)}, ${Math.round(props.topR)}, ${Math.round(props.leftR)} ]`}</div>
+}

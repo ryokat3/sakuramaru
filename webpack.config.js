@@ -111,7 +111,7 @@ const rendererConfig = {
             template: 'html/index.html',
             inlineSource: '.(js|css)$' // HtmlWebpackInlineSourcePlugin
         }),
-      new HtmlWebpackInlineSourcePlugin()
+        new HtmlWebpackInlineSourcePlugin()
     ]
 }
 

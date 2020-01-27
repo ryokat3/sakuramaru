@@ -4,12 +4,17 @@ import { MainConfig } from "./MainConfig"
 import { RuntimeInfo } from "./RuntimeInfo"
 
 export interface MapDataType {
-    [fileName: string]: {
-        description?: string
-        leftMap?: {
-            fileName: string,
-            points: Array<[number, number, number, number]> // [leftX, leftY, rightX, rightY]
+    maps: {
+        [fileName: string]: {
+            description?: string
+            leftMap?: {
+                fileName: string,
+                points: Array<[number, number, number, number]> // [leftX, leftY, rightX, rightY]
+            }
         }
+    },
+    data: {
+        notice?: string | string[]
     }
 }
 

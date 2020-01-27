@@ -3,7 +3,7 @@ import { Command } from "commander"
 import { App, app, BrowserWindow, BrowserWindowConstructorOptions } from "electron"
 import * as fs from "fs"
 import * as path from "path"
-import { MainConfig, defaultMainConfig } from "./MainConfig"
+import { defaultMainConfig, MainConfig } from "./MainConfig"
 import { getRuntimeInfo, RuntimeInfo } from "./RuntimeInfo"
 
 function getCommandLineParse(appConfig: MainConfig) {
