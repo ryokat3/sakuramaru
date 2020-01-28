@@ -9,7 +9,9 @@ export interface MapViewerProps {
     width: number,
     height: number,
     id: GripType,
-    mapDivRef: React.MutableRefObject<any>
+    mapDivRef: React.MutableRefObject<any>,
+    doubleTapInterval: number,
+    doubleTapDistance: number
 }
 const preventDefault = (e: TouchEvent) => {
     if (e.cancelable) {
@@ -58,7 +60,7 @@ export const MapViewer: React.FunctionComponent<MapViewerProps> = (props) => {
                 
                 if (document.fullscreenEnabled) {
                     const now = new Date().getTime()
-                    if ((now - tapTime) < 1000) {
+                    if ((now - tapTime) < props.doubleTapInterval) {
                         if (document.fullscreenElement === null) {
                             props.mapDivRef.current.requestFullscreen()
                         }
@@ -104,6 +106,11 @@ export const MapViewer: React.FunctionComponent<MapViewerProps> = (props) => {
                 setTouchX(e.changedTouches[0].clientX)
                 setTouchY(e.changedTouches[0].clientY)
                 context.dispatcher.moveMap([moveX, moveY])
+                
+                // Cancel double tap                
+                if (moveX + moveY > props.doubleTapDistance) {
+                    setTapTime(0)
+                }
             }}
         ></div>
     }</TopContext.Consumer>

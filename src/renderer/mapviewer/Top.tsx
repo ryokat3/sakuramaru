@@ -75,12 +75,12 @@ export const Top: React.FunctionComponent<{}> = () => {
             <MapViewer id={"left"}
                 mapFile={(state.selectedMap !== undefined) ? state.appConfig.mapDir + "/" + state.mapData.maps[state.selectedMap].leftMap?.fileName : ""}
                 top={state.leftMapView.top} left={state.leftMapView.left} width={state.mapWidth} height={state.mapHeight}
-                mapDivRef={mapDivRef}
+                mapDivRef={mapDivRef} doubleTapInterval={state.appConfig.doubleTapInterval} doubleTapDistance={state.appConfig.doubleTapDistance}
             />
             <MapViewer id={"right"}
                 mapFile={state.appConfig.mapDir + "/" + state.selectedMap}
                 top={state.rightMapView.top} left={state.rightMapView.left} width={state.mapWidth} height={state.mapHeight}
-                mapDivRef={mapDivRef}
+                mapDivRef={mapDivRef} doubleTapInterval={state.appConfig.doubleTapInterval} doubleTapDistance={state.appConfig.doubleTapDistance}
             />
         </div>
         <MapPoints topL={state.leftMapView.top} leftL={state.leftMapView.left} topR={state.rightMapView.top} leftR={state.rightMapView.left}></MapPoints>
