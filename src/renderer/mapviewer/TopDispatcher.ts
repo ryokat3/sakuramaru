@@ -33,6 +33,7 @@ export const topDispatcher = new Dispatcher<TopFdt>()
     .addParameterAction("moveMap")
     .addAction("ungripMap")
     .addParameterAction("switchSync")
+    .addParameterAction("changeMapSize")
 
 export type TopDispatcherType = DispatcherType<typeof topDispatcher>
-
+

@@ -39,7 +39,7 @@ export const Top: React.FunctionComponent<{}> = () => {
     useEffect(() => {
         dispatcher.getMapData(state.appConfig)
     }, [])
-
+/*
     useEffect(() => {
         const preventDefault = (e: TouchEvent) => { e.preventDefault() }
         if (state.grip !== "none") {
@@ -49,23 +49,38 @@ export const Top: React.FunctionComponent<{}> = () => {
             document.removeEventListener("touchmove", preventDefault)
         }
     }, [ state.grip ])
+*/
+    const mapDivRef = React.useRef(null)
 
     const context = {
         dispatcher,
         style
     }
 
+    document.onfullscreenchange = (_)=>{
+        if (document.fullscreenEnabled) {
+            if (document.fullscreenElement === null) {
+                dispatcher.changeMapSize([600, 200])                
+            }
+            else {    
+                dispatcher.changeMapSize([window.innerHeight, Math.floor(window.innerWidth / 2) ])
+            }
+        }
+    }
+
     return <TopContext.Provider value={context}>
         <div><h1>{state.appConfig.name}</h1></div>
         <MapSelector mapData={state.mapData} mapFile={state.selectedMap}></MapSelector>
-        <div>
+        <div ref={mapDivRef}>
             <MapViewer id={"left"}
                 mapFile={(state.selectedMap !== undefined) ? state.appConfig.mapDir + "/" + state.mapData.maps[state.selectedMap].leftMap?.fileName : ""}
                 top={state.leftMapView.top} left={state.leftMapView.left} width={state.mapWidth} height={state.mapHeight}
+                mapDivRef={mapDivRef}
             />
             <MapViewer id={"right"}
                 mapFile={state.appConfig.mapDir + "/" + state.selectedMap}
                 top={state.rightMapView.top} left={state.rightMapView.left} width={state.mapWidth} height={state.mapHeight}
+                mapDivRef={mapDivRef}
             />
         </div>
         <MapPoints topL={state.leftMapView.top} leftL={state.leftMapView.left} topR={state.rightMapView.top} leftR={state.rightMapView.left}></MapPoints>

@@ -99,6 +99,13 @@ export const topReducer = new Reducer<TopFdt, TopStateType>()
             return state
         }
     })
+    .add("changeMapSize", (state, [height, width])=>{
+        return {
+            ...state,
+            mapHeight: height,
+            mapWidth: width
+        }    
+    })
     .add("switchSync", (state, syncMapMove) => {
         return {
             ...state,

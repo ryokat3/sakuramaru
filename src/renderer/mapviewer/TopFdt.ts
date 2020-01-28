@@ -11,5 +11,6 @@ export type TopFdt = {
     ungripMap: Payload<void>,
     moveMap: Payload<[number, number]>,
     selectMap: Payload<string>,
-    switchSync: Payload<boolean>
+    switchSync: Payload<boolean>,
+    changeMapSize: Payload<[number, number]>,
 }
