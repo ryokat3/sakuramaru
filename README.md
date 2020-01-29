@@ -19,7 +19,7 @@
 
 *The Ark Sakura*, Kobo Abe, translated by Juliet Winters Carpenter
 
-![Shibuya crossing, Tokyo, Japan](media/Shibuya_crossing.png)
+![Shibuya crossing, Tokyo, Japan](./media/Shibuya_crossing.PNG)
 
 Shibuya crossing, Tokyo, Japan
 
