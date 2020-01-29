@@ -106,7 +106,7 @@ const rendererConfig = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: "Electron Template",
+            title: "Sakuramaru",
             filename: 'index.html',
             template: 'html/index.html',
             inlineSource: '.(js|css)$' // HtmlWebpackInlineSourcePlugin
