@@ -1,10 +1,12 @@
+<link rel="stylesheet" href="./media/readme.css">
+
 # Sakura maru
 
-3D Aerial Photograph Viewer inspired by [The Ark Sakura](https://en.wikipedia.org/wiki/The_Ark_Sakura)
+3D Aerial Photograph Viewer suggested in [The Ark Sakura](https://en.wikipedia.org/wiki/The_Ark_Sakura)
 
 ## What is 3D Aerial Photograph
 
-![3D Aerial Photo](/img/3d_aerial_photo.svg)
+![3D Aerial Photo](/media/3d_aerial_photo.svg#thumbnail)
 
 > Since aerial photographs are taken at fixed intervals -- one every ten seconds from a survey plane -- approximately three-fourths of the geographical features are successive photographs in sequence, therefore, and takeing advantage of the resulting parallax, you can make the sense stand out in three dimensions.
 
