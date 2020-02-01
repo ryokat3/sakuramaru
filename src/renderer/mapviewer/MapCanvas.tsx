@@ -67,9 +67,7 @@ export const MapCanvas: React.FunctionComponent<MapCanvasProps> = (props) => {
                 const now = new Date().getTime()
                 if ((now - tapTime) < props.doubleTapInterval) {
                     if (document.fullscreenElement === null && canvasRef.current !== null) {
-                        canvasRef.current.requestFullscreen().then(()=>{
-                            const rect = canvasRef.current?.getBoundingClientRect()    
-                        })
+                        canvasRef.current.requestFullscreen()
                     }
                     else {
                         document.exitFullscreen()
