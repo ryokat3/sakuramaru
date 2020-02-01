@@ -36,4 +36,4 @@ Shibuya crossing, Tokyo, Japan
 
 #### *Note*
 - *Source of Aerial Photographs:* [The web site of Japanese Geographical Survey Institute](https://mapps.gsi.go.jp/)
-- Aerial photographs in this page were edited by [Sakukramaru](https://github.com/wak109/sakuramaru)
+- Aerial photographs are retouched by [Sakukramaru](https://github.com/wak109/sakuramaru)

@@ -3,7 +3,7 @@ import * as path from "path"
 import { MainConfig } from "./MainConfig"
 import { RuntimeInfo } from "./RuntimeInfo"
 
-export interface MapDataType {
+export type MapDataType = {
     maps: {
         [fileName: string]: {
             description?: string

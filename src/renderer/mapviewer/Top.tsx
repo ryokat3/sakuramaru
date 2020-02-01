@@ -5,9 +5,10 @@ import { MapData } from "./MapData"
 import { MapPoints } from "./MapPoints"
 import { MapSelector } from "./MapSelector"
 import { MapSyncSwiitch } from "./MapSyncSwitch"
-import { MapViewer } from "./MapViewer"
+import { MapCanvas } from "./MapCanvas"
 import { topDispatcher, TopDispatcherType } from "./TopDispatcher"
-import { initialTopState, topReducer } from "./TopReducer"
+import { initialTopState, topReducer, getRightMapImage, getLeftMapImage } from "./TopReducer"
+import { AppConfig } from "../AppConfig"
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -27,6 +28,7 @@ const useStyles = makeStyles((theme: Theme) =>
 export interface TopContextType {
     dispatcher: TopDispatcherType
     style: ReturnType<typeof useStyles>
+    appConfig: AppConfig
 }
 
 export const TopContext = createContext<TopContextType>(Object.create(null))
@@ -39,22 +41,13 @@ export const Top: React.FunctionComponent<{}> = () => {
     useEffect(() => {
         dispatcher.getMapData(state.appConfig)
     }, [])
-/*
-    useEffect(() => {
-        const preventDefault = (e: TouchEvent) => { e.preventDefault() }
-        if (state.grip !== "none") {
-            document.addEventListener("touchmove", preventDefault, { passive: false})
-        }
-        return () => {
-            document.removeEventListener("touchmove", preventDefault)
-        }
-    }, [ state.grip ])
-*/
-    const mapDivRef = React.useRef(null)
+
+    // const mapDivRef = React.useRef(null)
 
     const context = {
-        dispatcher,
-        style
+        dispatcher: dispatcher,
+        style: style,
+        appConfig: state.appConfig
     }
 
     document.onfullscreenchange = (_)=>{
@@ -70,7 +63,26 @@ export const Top: React.FunctionComponent<{}> = () => {
 
     return <TopContext.Provider value={context}>
         <div><h1>{state.appConfig.name}</h1></div>
-        <MapSelector mapData={state.mapData} mapFile={state.selectedMap}></MapSelector>
+        <MapSelector mapData={state.mapData} mapImage={state.mapImage} mapFile={state.selectedMap}></MapSelector>
+        <MapCanvas
+            rightMapImage={getRightMapImage(state)}
+            rightMapTop={state.rightView.top}
+            rightMapLeft={state.rightView.left}
+            leftMapImage={getLeftMapImage(state)}
+            leftMapTop={state.leftView.top}
+            leftMapLeft={state.leftView.left}
+            width={state.viewWidth}
+            height={state.viewHeight}
+            doubleTapInterval={state.appConfig.doubleTapInterval}
+            doubleTapDistance={state.appConfig.doubleTapDistance}      
+        ></MapCanvas>        
+        <MapPoints topL={state.leftView.top} leftL={state.leftView.left} topR={state.rightView.top} leftR={state.rightView.left}></MapPoints>
+        <MapSyncSwiitch syncMapMove={state.syncMapMove} ></MapSyncSwiitch>
+        <MapData data={state.mapData.data}></MapData>
+    </TopContext.Provider>
+}
+
+/*
         <div ref={mapDivRef}>
             <MapViewer id={"left"}
                 mapFile={(state.selectedMap !== undefined) ? state.appConfig.mapDir + "/" + state.mapData.maps[state.selectedMap].leftMap?.fileName : ""}
@@ -83,8 +95,4 @@ export const Top: React.FunctionComponent<{}> = () => {
                 mapDivRef={mapDivRef} doubleTapInterval={state.appConfig.doubleTapInterval} doubleTapDistance={state.appConfig.doubleTapDistance}
             />
         </div>
-        <MapPoints topL={state.leftMapView.top} leftL={state.leftMapView.left} topR={state.rightMapView.top} leftR={state.rightMapView.left}></MapPoints>
-        <MapSyncSwiitch syncMapMove={state.syncMapMove} ></MapSyncSwiitch>
-        <MapData data={state.mapData.data}></MapData>
-    </TopContext.Provider>
-}
+*/

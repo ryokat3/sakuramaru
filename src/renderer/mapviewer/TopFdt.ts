@@ -5,7 +5,7 @@ import { GripType } from "./TopReducer"
 
 export type TopFdt = {
     getMapData: (appConfig: AppConfig) => Promise<Payload<MapDataType, unknown>>,
-    getMap: (appConfig: AppConfig, fileName: string) => Promise<Payload<{ fileName: string, blob: Blob }, unknown>>,
+    getMap: (appConfig: AppConfig, fileName: string) => Promise<Payload<{ fileName: string, image:HTMLImageElement }, unknown>>,
 
     gripMap: Payload<GripType>,
     ungripMap: Payload<void>,

@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { makeStyles } from '@material-ui/core/styles'
 import { TopContext } from "./Top"
 import { GripType } from "./TopReducer"
 
@@ -13,31 +14,51 @@ export interface MapViewerProps {
     doubleTapInterval: number,
     doubleTapDistance: number
 }
+
 const preventDefault = (e: TouchEvent) => {
     if (e.cancelable) {
         e.preventDefault()
     }
 }
 
+const useStyles = makeStyles({
+    root: {
+        // backgroundImage: (props:MapViewerProps)=>`url(${props.mapFile})`,
+        width: (props:MapViewerProps)=>`${props.width}px`,
+        height: (props:MapViewerProps)=>`${props.height}px`,
+        // backgroundPosition: (props:MapViewerProps)=>`-${props.top}px -${props.left}px`,
+        overscrollBehavior: "none",
+        // overflow: "auto",
+        display: "inline-block",
+
+        '&:before': {
+            content: '""',
+            position: 'absolute',                        
+            width: (props:MapViewerProps)=>`${props.left + props.width}px`,
+            height: (props:MapViewerProps)=>`${props.top + props.height}px`,
+            top: (props:MapViewerProps)=>`-${props.left}px`,                        
+            left: (props:MapViewerProps)=>`-${props.top}px`,            
+            background: (props:MapViewerProps)=>`url(${props.mapFile})`,
+            transform: 'rotate(0deg)',            
+            'z-index': -1
+        },
+        position: 'relative',
+        overflow: 'hidden'
+    }
+})
+
 export const MapViewer: React.FunctionComponent<MapViewerProps> = (props) => {
+
+    const classes = useStyles(props)
 
     const [ touchX, setTouchX ] = useState(0)
     const [ touchY, setTouchY ] = useState(0)
     const [ tapTime, setTapTime ] = useState(new Date().getTime())
 
-    const mapStyle = {
-        backgroundImage: `url(${props.mapFile})`,
-        width: `${props.width}px`,
-        height: `${props.height}px`,
-        backgroundPosition: `-${props.top}px -${props.left}px`,
-        overscrollBehavior: "none",
-        overflow: "auto"
-    }
-
     return <TopContext.Consumer>{(context) =>
         <div
-            className={context.style.mapViewer}
-            style={mapStyle}
+            className={classes.root}
+            // style={mapStyle}
             onMouseDown={(_) => {
                 console.log(`mouse down`)    
                 context.dispatcher.gripMap(props.id)
@@ -106,7 +127,7 @@ export const MapViewer: React.FunctionComponent<MapViewerProps> = (props) => {
                 setTouchX(e.changedTouches[0].clientX)
                 setTouchY(e.changedTouches[0].clientY)
                 context.dispatcher.moveMap([moveX, moveY])
-                
+
                 // Cancel double tap                
                 if (moveX + moveY > props.doubleTapDistance) {
                     setTapTime(0)

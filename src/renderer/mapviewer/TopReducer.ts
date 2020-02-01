@@ -1,7 +1,7 @@
 import { MapDataType } from "../../MapData"
 import { Reducer } from "../../utils/FdtFlux"
 import { defaultAppConfig } from "../AppConfig"
-import { calibrateLeftMap, calibrateRightMap, getSyncPoints, moveLeftMap, moveRightMap } from "./MapCalibrator"
+import { getSyncPoints, moveLeftMap, moveRightMap } from "./MapCalibrator"
 import { TopFdt } from "./TopFdt"
 
 export type GripType = "left" | "right" | "none"
@@ -12,24 +12,38 @@ export const initialTopState = {
         maps: Object.create(null),
         data: Object.create(null)
     } as MapDataType,
-    mapBlob: Object.create(null) as { [fileName: string]: Blob },
-    selectedMap: undefined as string | undefined,
-    leftMap: undefined as string | undefined,
+    mapImage: Object.create(null) as { [fileName: string]: HTMLImageElement },
+    selectedMap: undefined as string | undefined,    
     grip: "none" as GripType,
-    mapWidth: 200,
-    mapHeight: 600,
-    rightMapView: {
-        top: 0,
-        left: 0
+    viewWidth: 200,
+    viewHeight: 600,
+    rightView: {
+        left: 0,
+        top: 0        
     },
-    leftMapView: {
-        top: 0,
-        left: 0
+    leftView: {        
+        left: 0,
+        top: 0
     },
     syncMapMove: true
 }
 
+
+
 export type TopStateType = typeof initialTopState
+
+export function getRightMapData(state:TopStateType) {
+    return (state.selectedMap !== undefined) ? state.mapData.maps[state.selectedMap] : undefined
+}
+
+export function getRightMapImage(state:TopStateType) {
+    return (state.selectedMap !== undefined) ? state.mapImage[state.selectedMap] : undefined
+}
+
+export function getLeftMapImage(state:TopStateType) {    
+    const leftMapFileName = getRightMapData(state)?.leftMap?.fileName
+    return (leftMapFileName !== undefined) ? state.mapImage[leftMapFileName] : undefined
+}
 
 export const topReducer = new Reducer<TopFdt, TopStateType>()
     .add("getMapData", (state, mapData) => {
@@ -41,30 +55,28 @@ export const topReducer = new Reducer<TopFdt, TopStateType>()
     .addError("getMapData", (state) => {
         return state
     })
-    .add("getMap", (state, mapBlob) => {
+    .add("getMap", (state, mapImage) => {
         return {
             ...state,
-            mapBlob: {
-                ...state.mapBlob,
-                [mapBlob.fileName]: mapBlob.blob
+            mapImage: {
+                ...state.mapImage,
+                [mapImage.fileName]: mapImage.image
             }
         }
     })
-    .add("selectMap", (state, mapFile) => {
-        const leftMap = state.mapData.maps[mapFile].leftMap?.fileName
+    .add("selectMap", (state, mapFile) => {        
         const point = state.mapData.maps[mapFile].leftMap?.points[0] || [0, 0, 0, 0]
 
         return {
             ...state,
-            selectedMap: mapFile,
-            leftMap,
-            leftMapView: {
-                top: point[0],
-                left: point[1]
+            selectedMap: mapFile,            
+            leftView: {
+                left: point[0],
+                top: point[1]                
             },
-            rightMapView: {
-                top: point[2],
-                left: point[3]
+            rightView: {
+                left: point[2],    
+                top: point[3]                
             }
         }
     })
@@ -88,9 +100,11 @@ export const topReducer = new Reducer<TopFdt, TopStateType>()
         } else if ((state.syncMapMove === true) && (points.length == 0)) {
             return moveLeftMap(moveRightMap(state, movementX, movementY), movementX, movementY)
         } else if ((state.syncMapMove === true) && (state.grip === "left")) {
-            return calibrateRightMap(moveLeftMap(state, movementX, movementY))
+            // return calibrateRightMap(moveLeftMap(state, movementX, movementY))
+            return moveLeftMap(state, movementX, movementY)
         } else if ((state.syncMapMove === true) && (state.grip === "right")) {
-            return calibrateLeftMap(moveRightMap(state, movementX, movementY))
+            // return calibrateLeftMap(moveRightMap(state, movementX, movementY))
+            return moveRightMap(state, movementX, movementY)
         } else if (state.grip === "left") {
             return moveLeftMap(state, movementX, movementY)
         } else if (state.grip === "right") {
@@ -102,8 +116,8 @@ export const topReducer = new Reducer<TopFdt, TopStateType>()
     .add("changeMapSize", (state, [height, width])=>{
         return {
             ...state,
-            mapHeight: height,
-            mapWidth: width
+            viewHeight: height,
+            viewWidth: width
         }    
     })
     .add("switchSync", (state, syncMapMove) => {
