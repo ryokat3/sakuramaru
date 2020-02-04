@@ -6,7 +6,7 @@ type PointPair = [ Point, Point ]
 const angleUnit = 30
 
 export function getSyncPoints(state: TopStateType): Array<[number, number, number, number]> {
-    return (state.selectedMap !== undefined) ? ( state.mapData.maps[state.selectedMap].leftMap?.points || [] ) : []
+    return (state.selectedMap !== undefined) ? (state.overlap === "left") ? ( state.mapData.maps[state.selectedMap].leftMap?.points || [] ) : ( state.mapData.maps[state.selectedMap].upperMap?.points || [] ) : []        
 }
 
 function getPairPointListForLeft(points: Array<[number, number, number, number]>): PointPair[] {
@@ -55,18 +55,23 @@ function getOpponentWeight(pair: PointPair, center: Point): [Point, number] {
     return [ [pair[1][0] - pair[0][0] + center[0], pair[1][1] - pair[0][1] + center[1] ], (2 ** 20) / Math.sqrt(getDistance(center, pair[0])) ]
 }
 
-function adjustPoint(pointMapper:(src:Point)=>Point, src:Point, maxWidth:number, maxHeight:number):PointPair{        
+function adjustPoint(pointMapper:(src:Point)=>Point, src:Point, maxWidth:number, maxHeight:number):PointPair {    
     const dst = pointMapper(src)
+    console.log(`${src} ${dst} ${maxWidth} ${maxHeight}`)    
     if (dst[0] < 0) {
+        console.log(`width < 0, ${[src[0] + 1, src[1]]}`)    
         return adjustPoint(pointMapper, [src[0] + 1, src[1]], maxWidth, maxHeight)
     }
     else if (dst[0] >= maxWidth) {
+        console.log(`width > max, ${[src[0] - 1, src[1]]}`)        
         return adjustPoint(pointMapper, [src[0] - 1, src[1]], maxWidth, maxHeight)
     }
     else if (dst[1] < 0) {
+        console.log(`height < 0, ${[src[0], src[1] + 1]}`)            
         return adjustPoint(pointMapper, [src[0], src[1] + 1], maxWidth, maxHeight)
     }
     else if (dst[1] >= maxHeight) {
+        console.log(`height > max, ${[src[0], src[1] -1]}`)                
         return adjustPoint(pointMapper, [src[0], src[1] - 1], maxWidth, maxHeight)
     }
     else {
@@ -75,12 +80,12 @@ function adjustPoint(pointMapper:(src:Point)=>Point, src:Point, maxWidth:number,
 }
 
 export function moveRightMap(state: TopStateType, movementX: number, movementY: number): TopStateType {
-    const rightMapImage = getRightMapImage(state)
-    const leftMapImage = getLeftMapImage(state)
+    const rightMapImage = getRightMapImage(state.mapImage, state.selectedMap)
+    const leftMapImage = getLeftMapImage(state.mapData, state.mapImage, state.selectedMap, state.overlap)
     const rightViewTop = Math.min(Math.max(state.rightView.top - movementX, 0), (rightMapImage !== undefined) ? rightMapImage.height - state.viewHeight : Number.MAX_VALUE)
     const rightViewLeft = Math.min(Math.max(state.rightView.left - movementY, 0), (rightMapImage !== undefined) ? rightMapImage.width - state.viewWidth : Number.MAX_VALUE)
 
-    if ((state.syncMapMove === false) || (leftMapImage === undefined)) {
+    if ((state.syncMapMove === false) || (leftMapImage === undefined)) {        
         return {
             ...state,
             rightView: {
@@ -111,12 +116,12 @@ export function moveRightMap(state: TopStateType, movementX: number, movementY: 
 }
 
 export function moveLeftMap(state: TopStateType, movementX: number, movementY: number): TopStateType {
-    const rightMapImage = getRightMapImage(state)
-    const leftMapImage = getLeftMapImage(state)
+    const rightMapImage = getRightMapImage(state.mapImage, state.selectedMap)
+    const leftMapImage = getLeftMapImage(state.mapData, state.mapImage, state.selectedMap, state.overlap)
     const leftViewTop = Math.min(Math.max(state.leftView.top - movementX, 0), (leftMapImage !== undefined) ? leftMapImage.height - state.viewHeight : Number.MAX_VALUE)
     const leftViewLeft = Math.min(Math.max(state.leftView.left - movementY, 0), (leftMapImage !== undefined) ? leftMapImage.width - state.viewWidth : Number.MAX_VALUE)
 
-    if ((state.syncMapMove === false) || (rightMapImage === undefined)) {
+    if ((state.syncMapMove === false) || (rightMapImage === undefined)) {        
         return {
             ...state,
             leftView: {

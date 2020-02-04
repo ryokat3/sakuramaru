@@ -3,15 +3,22 @@ import * as path from "path"
 import { MainConfig } from "./MainConfig"
 import { RuntimeInfo } from "./RuntimeInfo"
 
+export type MapData = {
+    description?: string
+    leftMap?: {
+        fileName: string,
+        points: Array<[number, number, number, number]> // [leftX, leftY, rightX, rightY]
+    },
+    upperMap?: {
+        fileName: string,
+        points: Array<[number, number, number, number]> // [leftX, leftY, rightX, rightY]
+    }
+
+}
+
 export type MapDataType = {
     maps: {
-        [fileName: string]: {
-            description?: string
-            leftMap?: {
-                fileName: string,
-                points: Array<[number, number, number, number]> // [leftX, leftY, rightX, rightY]
-            }
-        }
+        [fileName: string]: MapData
     },
     data: {
         notice?: string | string[]

@@ -63,36 +63,22 @@ export const Top: React.FunctionComponent<{}> = () => {
 
     return <TopContext.Provider value={context}>
         <div><h1>{state.appConfig.name}</h1></div>
-        <MapSelector mapData={state.mapData} mapImage={state.mapImage} mapFile={state.selectedMap}></MapSelector>
+        <MapSelector mapData={state.mapData} mapImage={state.mapImage} mapFile={state.selectedMap} overlap={state.overlap}></MapSelector>
         <MapCanvas
-            rightMapImage={getRightMapImage(state)}
+            rightMapImage={getRightMapImage(state.mapImage, state.selectedMap)}
             rightMapTop={state.rightView.top}
             rightMapLeft={state.rightView.left}
-            leftMapImage={getLeftMapImage(state)}
+            leftMapImage={getLeftMapImage(state.mapData, state.mapImage, state.selectedMap, state.overlap)}
             leftMapTop={state.leftView.top}
             leftMapLeft={state.leftView.left}
             width={state.viewWidth}
             height={state.viewHeight}
             doubleTapInterval={state.appConfig.doubleTapInterval}
-            doubleTapDistance={state.appConfig.doubleTapDistance}      
+            doubleTapDistance={state.appConfig.doubleTapDistance}
+            overlap={state.overlap}    
         ></MapCanvas>        
         <MapPoints topL={state.leftView.top} leftL={state.leftView.left} topR={state.rightView.top} leftR={state.rightView.left}></MapPoints>
         <MapSyncSwiitch syncMapMove={state.syncMapMove} ></MapSyncSwiitch>
         <MapData data={state.mapData.data}></MapData>
     </TopContext.Provider>
 }
-
-/*
-        <div ref={mapDivRef}>
-            <MapViewer id={"left"}
-                mapFile={(state.selectedMap !== undefined) ? state.appConfig.mapDir + "/" + state.mapData.maps[state.selectedMap].leftMap?.fileName : ""}
-                top={state.leftMapView.top} left={state.leftMapView.left} width={state.mapWidth} height={state.mapHeight}
-                mapDivRef={mapDivRef} doubleTapInterval={state.appConfig.doubleTapInterval} doubleTapDistance={state.appConfig.doubleTapDistance}
-            />
-            <MapViewer id={"right"}
-                mapFile={state.appConfig.mapDir + "/" + state.selectedMap}
-                top={state.rightMapView.top} left={state.rightMapView.left} width={state.mapWidth} height={state.mapHeight}
-                mapDivRef={mapDivRef} doubleTapInterval={state.appConfig.doubleTapInterval} doubleTapDistance={state.appConfig.doubleTapDistance}
-            />
-        </div>
-*/

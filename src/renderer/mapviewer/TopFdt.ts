@@ -1,7 +1,7 @@
 import { MapDataType } from "../../MapData"
 import { Payload } from "../../utils/Fdt"
 import { AppConfig } from "../AppConfig"
-import { GripType } from "./TopReducer"
+import { GripType, TopStateType } from "./TopReducer"
 
 export type TopFdt = {
     getMapData: (appConfig: AppConfig) => Promise<Payload<MapDataType, unknown>>,
@@ -10,7 +10,7 @@ export type TopFdt = {
     gripMap: Payload<GripType>,
     ungripMap: Payload<void>,
     moveMap: Payload<[number, number]>,
-    selectMap: Payload<string>,
+    selectMap: Payload<{ fileName: string, overlap: TopStateType['overlap'] }>,
     switchSync: Payload<boolean>,
     changeMapSize: Payload<[number, number]>,
 }

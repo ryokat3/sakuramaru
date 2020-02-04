@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { TopContext } from "./Top"
+import { TopStateType } from "./TopReducer"
 
 type MapCanvasProps = {
     rightMapImage?: HTMLImageElement,
@@ -11,7 +12,8 @@ type MapCanvasProps = {
     width: number,
     height: number,
     doubleTapInterval: number,
-    doubleTapDistance: number
+    doubleTapDistance: number,
+    overlap: TopStateType['overlap']
 }
 
 const preventDefault = (e: TouchEvent) => {
@@ -27,10 +29,26 @@ export const MapCanvas: React.FunctionComponent<MapCanvasProps> = (props) => {
         if ((canvasRef.current !== undefined) && (canvasRef.current !== null)) {
             const context = canvasRef.current.getContext('2d')
             if (props.leftMapImage !== undefined) {
-                context?.drawImage(props.leftMapImage, props.leftMapLeft, props.leftMapTop, props.width, props.height, 0, 0, props.width, props.height)
+                if (props.overlap === "left") {
+                    context?.drawImage(props.leftMapImage, props.leftMapLeft, props.leftMapTop, props.width, props.height, 0, 0, props.width, props.height)
+                }
+                else {
+                    context?.save()
+                    context?.rotate(Math.PI/2)                    
+                    context?.drawImage(props.leftMapImage, props.leftMapLeft, props.leftMapTop, props.width, props.height, 0, - props.height, props.width, props.height)
+                    context?.restore()
+                }
             }
             if (props.rightMapImage !== undefined) {
-                context?.drawImage(props.rightMapImage, props.rightMapLeft, props.rightMapTop, props.width, props.height, props.width, 0, props.width, props.height)
+                if (props.overlap === "left") {    
+                    context?.drawImage(props.rightMapImage, props.rightMapLeft, props.rightMapTop, props.width, props.height, props.width, 0, props.width, props.height)
+                }
+                else {
+                    context?.save()   
+                    context?.rotate(Math.PI/2)                    
+                    context?.drawImage(props.rightMapImage, props.rightMapLeft, props.rightMapTop, props.width, props.height, 0, - props.height * 2, props.width, props.height)
+                    context?.restore() 
+                }
             }
         }
     })
@@ -41,11 +59,11 @@ export const MapCanvas: React.FunctionComponent<MapCanvasProps> = (props) => {
 
     return <TopContext.Consumer>{(context) => <canvas
         ref={canvasRef}
-        width={props.width * 2}
-        height={props.height}
+        width={(props.overlap === "left") ? props.width * 2 : props.height * 2}
+        height={(props.overlap === "left") ? props.height : props.width}
         onMouseDown={(e) => {
             const rect = e.currentTarget.getBoundingClientRect()    
-            if ((e.clientX - rect.left) < props.width) {
+            if ((e.clientX - rect.left) < ((props.overlap === "left") ? props.width : props.height)) {
                 context.dispatcher.gripMap('left')
             }
             else {
@@ -58,8 +76,13 @@ export const MapCanvas: React.FunctionComponent<MapCanvasProps> = (props) => {
         onMouseLeave={(_) => {            
             context.dispatcher.ungripMap()
         }}
-        onMouseMove={(e) => {            
-            context.dispatcher.moveMap([e.movementY, e.movementX])
+        onMouseMove={(e) => {
+            if (props.overlap === "left") {
+                context.dispatcher.moveMap([e.movementY, e.movementX])
+            }
+            else {
+                context.dispatcher.moveMap([-e.movementX, e.movementY])
+            }
         }}
 
         onTouchStart={(e) => {            
@@ -83,7 +106,7 @@ export const MapCanvas: React.FunctionComponent<MapCanvasProps> = (props) => {
             setTouchY(e.changedTouches[0].clientY)
 
             const rect = e.currentTarget.getBoundingClientRect()    
-            if ((e.changedTouches[0].clientX - rect.left) < props.width) {
+            if ((e.changedTouches[0].clientX - rect.left) < ((props.overlap === "left") ? props.width : props.height)) {
                 context.dispatcher.gripMap('left')
             }
             else {
@@ -106,7 +129,8 @@ export const MapCanvas: React.FunctionComponent<MapCanvasProps> = (props) => {
             document.body.style.touchAction = "auto"
             document.removeEventListener("touchmove", preventDefault)
         }}
-        onTouchMove={(e) => {            
+        onTouchMove={(e) => {       
+            console.log(`onTouchMove, [${e.changedTouches[0].clientX}, ${e.changedTouches[0].clientY}]`)         
             document.addEventListener("touchmove", preventDefault, { passive: false })
             document.body.style.touchAction = "none"
             document.body.style.overflow = "hidden"
@@ -114,7 +138,12 @@ export const MapCanvas: React.FunctionComponent<MapCanvasProps> = (props) => {
             const moveY = e.changedTouches[0].clientY - touchY
             setTouchX(e.changedTouches[0].clientX)
             setTouchY(e.changedTouches[0].clientY)
-            context.dispatcher.moveMap([moveY, moveX])
+            if (props.overlap === "left"){
+                context.dispatcher.moveMap([moveY, moveX])
+            }
+            else {
+                context.dispatcher.moveMap([- moveX, moveY])
+            }
 
             // Cancel double tap                
             if (moveX + moveY > props.doubleTapDistance) {

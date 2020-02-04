@@ -13,7 +13,8 @@ export const initialTopState = {
         data: Object.create(null)
     } as MapDataType,
     mapImage: Object.create(null) as { [fileName: string]: HTMLImageElement },
-    selectedMap: undefined as string | undefined,    
+    selectedMap: undefined as string | undefined,
+    overlap: "left" as "left" | "upper",
     grip: "none" as GripType,
     viewWidth: 200,
     viewHeight: 600,
@@ -32,18 +33,24 @@ export const initialTopState = {
 
 export type TopStateType = typeof initialTopState
 
-export function getRightMapData(state:TopStateType) {
-    return (state.selectedMap !== undefined) ? state.mapData.maps[state.selectedMap] : undefined
+function getRightMapData(mapData:MapDataType, mapFileName:string|undefined) {
+    return (mapFileName !== undefined) ? mapData.maps[mapFileName] : undefined
 }
 
-export function getRightMapImage(state:TopStateType) {
-    return (state.selectedMap !== undefined) ? state.mapImage[state.selectedMap] : undefined
+export function getRightMapImage(mapImage:TopStateType['mapImage'], mapFileName:string|undefined) {
+    return (mapFileName !== undefined) ? mapImage[mapFileName] : undefined
 }
 
-export function getLeftMapImage(state:TopStateType) {    
-    const leftMapFileName = getRightMapData(state)?.leftMap?.fileName
-    return (leftMapFileName !== undefined) ? state.mapImage[leftMapFileName] : undefined
+
+export function getLeftViewFile(mapData:MapDataType, mapFileName:string|undefined, overlap:TopStateType['overlap'] = 'left') {    
+    return (overlap === "left") ? getRightMapData(mapData, mapFileName)?.leftMap?.fileName : getRightMapData(mapData, mapFileName)?.upperMap?.fileName    
 }
+
+export function getLeftMapImage(mapData:MapDataType, mapImage:TopStateType['mapImage'], mapFileName:string|undefined, overlap:TopStateType['overlap'] = 'left') {    
+    const leftViewFileName = getLeftViewFile(mapData, mapFileName, overlap)
+    return (leftViewFileName !== undefined) ? mapImage[leftViewFileName] : undefined
+}
+
 
 export const topReducer = new Reducer<TopFdt, TopStateType>()
     .add("getMapData", (state, mapData) => {
@@ -64,12 +71,18 @@ export const topReducer = new Reducer<TopFdt, TopStateType>()
             }
         }
     })
-    .add("selectMap", (state, mapFile) => {        
-        const point = state.mapData.maps[mapFile].leftMap?.points[0] || [0, 0, 0, 0]
+    .add("selectMap", (state, mapData) => {
+        const rightMapData = getRightMapData(state.mapData, mapData.fileName)
+        const point = (mapData.overlap === "left") ? (rightMapData?.leftMap?.points !== undefined ? rightMapData?.leftMap?.points.length > 0 ? rightMapData?.leftMap?.points[0] : [0,0,0,0] :[0,0,0,0])
+            : (rightMapData?.upperMap?.points !== undefined ? rightMapData?.upperMap?.points.length > 0 ? rightMapData?.upperMap?.points[0] : [0,0,0,0] :[0,0,0,0])
+        const overlapChanged = (state.overlap !== mapData.overlap)
 
         return {
             ...state,
-            selectedMap: mapFile,            
+            selectedMap: mapData.fileName,
+            overlap: mapData.overlap,
+            viewWidth: (overlapChanged) ? state.viewHeight : state.viewWidth,
+            viewHeight: (overlapChanged) ? state.viewWidth : state.viewHeight,
             leftView: {
                 left: point[0],
                 top: point[1]                
@@ -99,12 +112,12 @@ export const topReducer = new Reducer<TopFdt, TopStateType>()
             return state
         } else if ((state.syncMapMove === true) && (points.length == 0)) {
             return moveLeftMap(moveRightMap(state, movementX, movementY), movementX, movementY)
-        } else if ((state.syncMapMove === true) && (state.grip === "left")) {
-            // return calibrateRightMap(moveLeftMap(state, movementX, movementY))
+/*            
+        } else if ((state.syncMapMove === true) && (state.grip === "left")) {            
             return moveLeftMap(state, movementX, movementY)
-        } else if ((state.syncMapMove === true) && (state.grip === "right")) {
-            // return calibrateLeftMap(moveRightMap(state, movementX, movementY))
+        } else if ((state.syncMapMove === true) && (state.grip === "right")) {            
             return moveRightMap(state, movementX, movementY)
+*/
         } else if (state.grip === "left") {
             return moveLeftMap(state, movementX, movementY)
         } else if (state.grip === "right") {
