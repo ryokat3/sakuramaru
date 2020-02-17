@@ -1,7 +1,7 @@
 import { TopStateType, getRightMapImage, getLeftMapImage } from "./TopReducer"
 
-type Point = [ number, number ] // [x, y]
-type PointPair = [ Point, Point ]
+export type Point = [ number, number ] // [x, y]
+export type PointPair = [ Point, Point ]
 
 const angleUnit = 30
 

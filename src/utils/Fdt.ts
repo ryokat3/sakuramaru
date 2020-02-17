@@ -14,4 +14,3 @@ export interface Payload<S = never, E = never> {
 
 export type ValueType<T extends Payload<unknown, unknown>> = T[typeof success]
 export type ErrorType<T extends Payload<unknown, unknown>> = T[typeof error]
-

@@ -19,11 +19,13 @@
 
 *The Ark Sakura*, Kobo Abe, translated by Juliet Winters Carpenter
 
-![Shibuya crossing, Tokyo, Japan](./media/Shibuya_crossing.PNG)
+![Shibuya crossing, Tokyo, Japan](./media/Shibuya_Crossing.png)
 
-Shibuya crossing, Tokyo, Japan
+Shibuya crossing, Tokyo, Japan, 1974
 
+![Fukushima Daiichi Nuclear Power Plant, Fukushima, Japan](./media/Fukushima_Daiichi_Nuclear_Power_Plant.png)
 
+Fukushima Daiichi Nuclear Power Plant, Fukushima, Japan, 2018
 
 
 ## What you will experience
