@@ -1,19 +1,18 @@
 import * as chai from "chai"
-import { left, right } from "fp-ts/lib/Either"
-import { Payload } from "../src/utils/Fdt"
+import { Either, left, right } from "fp-ts/lib/Either"
 import { Dispatcher, Reducer } from "../src/utils/FdtFlux"
 
-interface ActionDesign {
-    "async": (val1: string, val2: number) => Promise<Payload<string>>,
-    "sync": (val: string) => Payload<string>,
-    "noparam": Payload<void>,
-    "paramBool": Payload<boolean>,
-    "paramString": Payload<string>,
-    "either": () => Payload<string, number>
-    "eitherPromise": () => Promise<Payload<string, number>>
+type ActionDesign = {
+    "async": (val1: string, val2: number) => Promise<string>,
+    "sync": (val: string) => string,
+    "noparam": void,
+    "paramBool": boolean,
+    "paramString": string,
+    "either": () => Either<number, string>,
+    "eitherPromise": () => Promise<Either<number,string>>
 }
 
-describe("flusUtils", () => {
+describe("fluxUtils", () => {
     it("action with parameter", () => {
 
         const dispatcher = new Dispatcher<ActionDesign>()
@@ -57,10 +56,10 @@ describe("flusUtils", () => {
 
     it("Reducer Either", () => {
         const reducer = new Reducer<ActionDesign, string>()
-            .add("either", (state: string, value: string) => `${state}_${value}`)
-            .addError("either", (state: string, value: number) => `${state}_${value + 1}`)
+            .add("either", (state: string, value: string) => `${state}_${value}`)            
+            .addError("either", (state: string, value: number) => `${state}_${value + 1}`)            
             .add("eitherPromise", (state: string, value: string) => `${state}_${value}`)
-            .addError("eitherPromise", (state: string, value: number) => `${state}_${value + 1}`)
+            .addError("eitherPromise", (state: string, value: number) => `${state}_${value + 1}`)            
             .build()
 
         chai.assert.equal(reducer("Hello", { type: "either", payload: "true" }), "Hello_true")

@@ -1,31 +1,31 @@
 import { FilterObject, SelectObject } from "boost-ts"
 import { FSA } from "flux-standard-action"
-import { Either, isLeft, isRight } from "fp-ts/lib/Either"
+import { isLeft, isRight } from "fp-ts/lib/Either"
 import { Dispatch } from "react"
-import { ErrorType, Fdt, Payload, ValueType } from "./Fdt"
-import { PromiseUnion, Unpromise } from "./tsUtils"
+import { PromiseUnion, BoxType, Unpromise, ValueType, ErrorType } from "./tsUtils"
 
 ////////////////////////////////////////////////////////////////////////
 /// Dispatcher
 ////////////////////////////////////////////////////////////////////////
 
-type DispatchArgsType<T extends Fdt> = T extends Payload<void|null|undefined|never, unknown> ? []
-        : T extends Payload<unknown, unknown> ? [ ValueType<T> ]
-        : T extends (...args: any[]) => unknown ? Parameters<T>
-        : never
+type BoxDispatchArgsType<T extends BoxType<unknown>> = T extends BoxType<void|null|undefined|never> ? []
+    : T extends BoxType<(...args: any[]) => any> ? Parameters<T['type']>
+    : T extends BoxType<any> ? [ T['type'] ]
+    : never
 
-type DispatchReterunType<T extends Fdt> = T extends ((...args: any[]) => Promise<any>) ? Promise<void> : void
+type DispatchArgsType<T> = BoxDispatchArgsType<BoxType<T>>
 
-type DispatchFunctionType<T extends Fdt> = (...args: DispatchArgsType<T>) => DispatchReterunType<T>
+type DispatchReterunType<T> = T extends ((...args: any[]) => Promise<any>) ? Promise<void> : void
 
-type ToEither<T> = T extends Payload<unknown, never> ? ValueType<T> : T extends Payload<unknown, unknown> ? Either<ErrorType<T>, ValueType<T>> : never
+type DispatchFunctionType<T> = (...args: DispatchArgsType<T>) => DispatchReterunType<T>
 
-export class Dispatcher<T extends { [type: string]: Fdt }, Keys extends keyof T = never> {
+
+export class Dispatcher<T extends { [type: string]: unknown }, Keys extends keyof T = never> {
     constructor(
         private readonly dispatcher: { [Key in keyof T]: (dispatch: Dispatch<FSA<string>>) => DispatchFunctionType<T[Key]> } = Object.create(null)
     ) {}
 
-    public addAction<Key extends keyof SelectObject<{ [LtdKey in Exclude<keyof T, Keys>]: T[LtdKey] }, Payload<void|unknown|undefined|never>>>(key: Key) {
+    public addAction<Key extends keyof SelectObject<{ [LtdKey in Exclude<keyof T, Keys>]: T[LtdKey] }, void|unknown|undefined|never>>(key: Key) {
         return new Dispatcher<T, Keys|Key>({
             ...this.dispatcher,
             [key]: (dispatch: Dispatch<FSA<string>>) => () => dispatch({ type: key as string })
@@ -35,13 +35,13 @@ export class Dispatcher<T extends { [type: string]: Fdt }, Keys extends keyof T 
     public addParameterAction<Key extends keyof FilterObject<{ [LtdKey in Exclude<keyof T, Keys>]: T[LtdKey] }, ((...args: any[]) => any) >>(key: Key) {
         return new Dispatcher<T, Keys|Key>({
             ...this.dispatcher,
-            [key]: (dispatch: Dispatch<FSA<string, unknown>>) => (payload: ValueType<T[Key]>) => dispatch({ type: key as string, payload })
+            [key]: (dispatch: Dispatch<FSA<string, unknown>>) => (payload: T[Key]) => dispatch({ type: key as string, payload })
         })
     }
 
     public addSyncAction<Key extends keyof FilterObject<SelectObject<{ [LtdKey in Exclude<keyof T, Keys>]: T[LtdKey] }, (...args: any[]) => any >, (...args: any[]) => Promise<any> >>(
         key: Key,
-        func: (...args: Parameters<T[Key]>) => ToEither<ReturnType<T[Key]>>
+        func: T[Key] // (...args: Parameters<T[Key]>) => ReturnType<T[Key]>
     ) {
         return new Dispatcher<T, Keys|Key>({
             ...this.dispatcher,
@@ -60,7 +60,8 @@ export class Dispatcher<T extends { [type: string]: Fdt }, Keys extends keyof T 
 
     public addAsyncAction<Key extends keyof SelectObject<{ [LtdKey in Exclude<keyof T, Keys>]: T[LtdKey] }, (...args: any[]) => Promise<any>>>(
         key: Key,
-        func: (...args: Parameters<T[Key]>) => Promise<ToEither<Unpromise<ReturnType<T[Key]>>>>
+        //func: (...args: Parameters<T[Key]>) => Promise<Unpromise<ReturnType<T[Key]>>>
+        func: T[Key]
     ) {
         return new Dispatcher<T, Keys|Key>({
             ...this.dispatcher,
@@ -89,23 +90,30 @@ export class Dispatcher<T extends { [type: string]: Fdt }, Keys extends keyof T 
 
 export type DispatcherType<D> =  D extends Dispatcher<infer T, infer Keys> ? { [Key in Keys]: DispatchFunctionType<T[Key]> } : never
 
+
 ////////////////////////////////////////////////////////////////////////
 /// Reducer
 ////////////////////////////////////////////////////////////////////////
 
-type ReducerPayloadType<T extends Fdt> = T extends Payload<void|null|undefined|never, unknown> ? never
-        : T extends Payload<unknown, unknown> ? ValueType<T>
-        : T extends (...args: any[]) => PromiseUnion<Payload<any, any>> ? ValueType<Unpromise<ReturnType<T>>>
-        : never
 
-type ReducerErrorPayloadType<T extends Fdt> =
-    T extends ((...args: any[]) => PromiseUnion<Payload<any, any>>) ? ErrorType<Unpromise<ReturnType<T>>> : never
+
+type BoxReducerPayloadType<T extends BoxType<unknown>> = T extends BoxType<void|null|undefined|never> ? never
+    : T extends BoxType<(...args: any[]) => unknown> ? ValueType<Unpromise<ReturnType<T['type']>>>   
+    : T extends BoxType<unknown> ? T['type']
+    : never
+
+type ReducerPayloadType<T> = BoxReducerPayloadType<BoxType<T>>
+
+type BoxReducerErrorPayloadType<T extends BoxType<unknown>> = T extends BoxType<((...args: any[]) => any)> ? ErrorType<Unpromise<ReturnType<T['type']>>> : ErrorType<T['type']>
+
+type ReducerErrorPayloadType<T> = BoxReducerErrorPayloadType<BoxType<T>>
 
 type ReducerCallbackType<State, PayloadType> = (state: State, payload: PayloadType, error?: boolean, meta?: any) => State
 
-type ErrorKeysList<T extends { [type: string]: Fdt }> = keyof SelectObject<T, (...args: any[]) => PromiseUnion<Payload<any, any>>>
+type ErrorKeysList<T extends { [type: string]: unknown }> = keyof SelectObject<T, (...args: any[]) => PromiseUnion<any>>
 
-export class Reducer<T extends { [type: string]: Fdt },
+
+export class Reducer<T extends { [type: string]: unknown },
         State,
         Keys extends keyof T = never,
         ErrorKeys extends ErrorKeysList<T> = never
