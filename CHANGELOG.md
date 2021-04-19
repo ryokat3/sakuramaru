@@ -8,6 +8,10 @@
 > - [Documentation]
 > - [Internal]
 
+## 0.6.0
+- **Internal**
+  - Remove Electron version
+  
 ## 0.5.1
 
 - **Description**
