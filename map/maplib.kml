@@ -1,0 +1,1623 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:xal="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0">
+    <Document>
+        <name>maplib.kml</name>
+        <Style id="SYMBOL1">
+            <IconStyle>
+                <scale>1.0</scale>
+                <heading>0.0</heading>
+                <Icon>
+                    <href>https://mapps.gsi.go.jp/js/img/marker_ext.png</href>
+                    <refreshInterval>0.0</refreshInterval>
+                    <viewRefreshTime>0.0</viewRefreshTime>
+                    <viewBoundScale>0.0</viewBoundScale>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Folder>
+            <name>maplib</name>
+            <visibility>1</visibility>
+            <open>1</open>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">25000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2002/01/12(平14)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=111636" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.643472222222,26.2381666666667</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">25000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2002/01/12(平14)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=111637" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.666138888889,26.2381944444444</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">25000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2002/01/12(平14)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=111638" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.68825,26.2380555555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">25000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2002/01/12(平14)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=111643" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.61825,26.19875</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">25000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2002/01/12(平14)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=111644" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.640888888889,26.1990277777778</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">25000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2002/01/12(平14)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=111645" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.664277777778,26.1983055555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">25000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2002/01/12(平14)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=111646" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.687444444444,26.1984444444444</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">25000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2002/01/12(平14)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=111647" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.710583333333,26.1985555555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">20000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2005/01/24(平17)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=25217" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.612777777778,26.1813611111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">20000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2005/01/24(平17)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=25218" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.630472222222,26.1814722222222</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">20000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2005/01/24(平17)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=25219" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.647916666667,26.1815833333333</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">20000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2005/01/24(平17)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=25220" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.66675,26.1821388888889</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">20000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2005/01/24(平17)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=25931" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.640388888889,26.2404166666667</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">20000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2005/01/24(平17)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=25932" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.658166666667,26.2404166666667</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">20000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2005/01/24(平17)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=25933" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.675388888889,26.24025</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">20000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2005/01/24(平17)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=24294" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.60675,26.2106111111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">20000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2005/01/24(平17)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=24295" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.628055555556,26.2107777777778</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">20000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2005/01/24(平17)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=24296" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.64675,26.2107222222222</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">20000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2005/01/24(平17)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=24737" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.666083333333,26.2113888888889</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">20000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2005/01/24(平17)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=24738" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.684972222222,26.2108611111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">20000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2005/01/24(平17)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=24830" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.702916666667,26.2106111111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">20000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2005/01/24(平17)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=24831" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.721027777778,26.2107777777778</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2006/06/21(平18)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=238404" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.732444444444,26.2182222222222</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2006/06/21(平18)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=238405" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.72625,26.2173611111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2006/06/21(平18)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=238406" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.720444444444,26.217</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2006/06/21(平18)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=238407" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.715527777778,26.2174722222222</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515471" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.651388888889,26.2394722222222</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515472" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.655611111111,26.2395</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515473" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.659833333333,26.2395</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515474" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.664083333333,26.2395277777778</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515475" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.668305555556,26.2395277777778</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515476" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.672527777778,26.2395555555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515477" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.676777777778,26.2395555555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515478" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.681,26.2396111111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515497" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.649138888889,26.2314166666667</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515498" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.653472222222,26.2311944444444</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515499" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.657805555556,26.231</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515500" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.662111111111,26.2308055555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515501" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.666444444444,26.2307222222222</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515502" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.67075,26.2306944444444</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515503" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.675083333333,26.2306944444444</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515504" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.679416666667,26.23075</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515505" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.683722222222,26.2308611111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515506" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.688055555556,26.2309444444444</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515507" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.692361111111,26.231</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515508" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.696666666667,26.2310555555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515509" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.701,26.2310833333333</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515516" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.731277777778,26.2309722222222</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515517" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.735583333333,26.231</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515518" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.739888888889,26.231</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515523" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.640861111111,26.2228611111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515524" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.645027777778,26.2228888888889</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515525" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.649166666667,26.2229166666667</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515526" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.653333333333,26.2229444444444</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515527" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.6575,26.2229166666667</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515528" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.661638888889,26.2228888888889</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515529" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.665805555556,26.2228611111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515530" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.669944444444,26.2228611111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515531" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.674111111111,26.2228333333333</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515532" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.678277777778,26.22275</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515533" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.682444444444,26.2226666666667</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515534" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.686583333333,26.2226666666667</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515535" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.69075,26.2227222222222</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515536" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.694888888889,26.2227777777778</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515537" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.699055555556,26.2228333333333</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515538" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.703222222222,26.2228333333333</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515539" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.707388888889,26.2228333333333</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515540" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.711527777778,26.2228333333333</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515541" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.715666666667,26.2228611111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515542" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.719833333333,26.2228888888889</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515543" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.724,26.2229444444444</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515544" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.728138888889,26.223</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515545" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.732305555556,26.2229444444444</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515552" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.634416666667,26.2146111111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515553" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.638638888889,26.2146111111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515554" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.642888888889,26.2146111111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515555" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.647111111111,26.2146111111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515556" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.651361111111,26.2146388888889</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515557" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.655583333333,26.2146666666667</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515558" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.659805555556,26.2147222222222</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515559" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.664055555556,26.2146944444444</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515560" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.668277777778,26.2146666666667</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515561" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.672527777778,26.2146111111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515562" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.67675,26.2145555555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515563" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.681,26.2144722222222</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515564" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.685222222222,26.2144444444444</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515565" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.689444444444,26.2144166666667</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515566" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.693694444444,26.2144444444444</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515567" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.697944444444,26.2145</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515568" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.702166666667,26.2145555555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515569" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.706388888889,26.2145833333333</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515570" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.710638888889,26.2145555555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515571" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.714861111111,26.2145277777778</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515572" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.719111111111,26.2145555555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515573" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.723333333333,26.2145555555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515574" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.727583333333,26.2145555555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515575" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.731805555556,26.2145555555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515576" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.736027777778,26.2145277777778</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515582" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.625583333333,26.2053611111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515583" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.629805555556,26.2054722222222</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515584" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.634055555556,26.2055555555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515585" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.638305555556,26.2056388888889</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515586" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.642555555556,26.2056666666667</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515587" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.646805555556,26.2057222222222</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515588" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.651055555556,26.2057777777778</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515589" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.655305555556,26.2058055555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515590" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.659527777778,26.2058055555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515591" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.663777777778,26.2057777777778</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515592" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.668027777778,26.2057777777778</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515593" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.672277777778,26.2057222222222</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515594" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.676527777778,26.2056388888889</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515595" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.680777777778,26.2055833333333</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515596" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.685027777778,26.2055555555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515597" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.689277777778,26.2054722222222</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515598" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.693527777778,26.2054166666667</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515599" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.697777777778,26.2053888888889</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515600" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.702027777778,26.2053611111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515601" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.706277777778,26.2053055555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515602" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.710527777778,26.2053611111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515603" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.71475,26.2054722222222</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515604" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.719,26.2055555555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515605" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.72325,26.2056944444444</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515614" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.621055555556,26.1960833333333</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515615" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.625444444444,26.1960277777778</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515616" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.629833333333,26.196</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515617" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.634222222222,26.1959444444444</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515618" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.638611111111,26.1959444444444</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515619" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.643027777778,26.1958888888889</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515620" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.647416666667,26.1958888888889</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515621" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.651805555556,26.1959166666667</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515622" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.656194444444,26.1959722222222</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515623" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.660583333333,26.1960555555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515624" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.664972222222,26.1961111111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515625" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.669361111111,26.1961388888889</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515626" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.67375,26.1961666666667</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515627" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.678138888889,26.1961666666667</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515628" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.682527777778,26.1962222222222</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515629" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.686916666667,26.19625</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515630" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.691305555556,26.1962777777778</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515631" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.695694444444,26.1963055555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515632" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.700111111111,26.1963333333333</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515633" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.7045,26.1963055555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515634" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.708888888889,26.1962777777778</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515635" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.713277777778,26.1962222222222</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515636" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.717666666667,26.1961388888889</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/11/06(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515637" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.722055555556,26.1960555555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/10/27(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515646" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.620805555556,26.1864166666667</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/10/27(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515647" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.625222222222,26.1865</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/10/27(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515648" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.629611111111,26.1865833333333</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/10/27(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515649" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.634,26.1866666666667</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/10/27(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515650" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.638416666667,26.1868055555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/10/27(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515651" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.642805555556,26.1868611111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/10/27(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515652" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.647222222222,26.1868333333333</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/10/27(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515653" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.651611111111,26.1868611111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/10/27(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515654" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.656,26.1868888888889</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/10/27(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515655" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.660416666667,26.1868888888889</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/10/27(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515656" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.664805555556,26.1868611111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/10/27(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515657" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.669194444444,26.1868055555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/10/27(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515658" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.673611111111,26.1868888888889</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/10/27(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515659" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.678,26.1870277777778</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/10/27(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515660" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.682388888889,26.1869722222222</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/10/27(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515683" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.645416666667,26.1778055555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/10/27(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515684" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.649722222222,26.1778055555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/10/27(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515685" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.654,26.1778611111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/10/27(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515686" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.658305555556,26.1778888888889</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">8000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2009/10/27(平21)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=515687" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.662611111111,26.1779166666667</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210140" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.612083333333,26.2303333333333</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210141" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.621277777778,26.2304722222222</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210142" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.630444444444,26.2305555555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210143" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.639694444444,26.2305</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210144" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.648888888889,26.2305277777778</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210145" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.658166666667,26.2306388888889</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210146" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.667333333333,26.23075</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210147" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.676583333333,26.2306944444444</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210148" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.685694444444,26.2306944444444</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210149" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.694916666667,26.2303888888889</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210150" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.704166666667,26.2304444444444</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210151" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.713444444444,26.2305833333333</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210152" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.722527777778,26.2306944444444</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210153" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.731722222222,26.2305277777778</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210171" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.612166666667,26.2192222222222</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210172" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.621361111111,26.2189722222222</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210173" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.630611111111,26.2190555555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210174" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.639638888889,26.2191388888889</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210175" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.648972222222,26.2193055555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210176" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.658166666667,26.2193888888889</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210177" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.667444444444,26.2196111111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210178" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.676638888889,26.2192777777778</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210179" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.68575,26.2193055555556</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210180" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.695,26.2194722222222</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210181" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.704222222222,26.2191111111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210182" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.713416666667,26.2191666666667</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210183" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.722694444444,26.2189722222222</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210184" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.731944444444,26.2190277777778</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210202" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.612027777778,26.2078611111111</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210203" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.621222222222,26.2077222222222</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210204" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.630472222222,26.2075277777778</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210205" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.639694444444,26.2076666666667</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210206" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.648944444444,26.2077777777778</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>諸元情報</name>
+                <description><![CDATA[<table style="width:250px;"><tr><th>分類</th><td align="center">空中写真</td></tr><tr><th>地図種別</th><td align="center">-</td></tr><tr><th>縮尺</th><td align="center">10000</td></tr><tr><th>作成・撮影年月日</th><td align="center">2010/09/27(平22)</td></tr><tr><th>カラー種別</th><td align="center">カラー</td></tr><tr><td>.</td><td>.</td></tr><tr><td colspan="2" align="center"> <a href="https://mapps.gsi.go.jp/map-lib-api/apiContentsView.do?specificationId=1210207" target="_blank">より詳細へ</a></td></tr></table>]]></description>
+                <styleUrl>#SYMBOL1</styleUrl>
+                <Point>
+                    <coordinates>127.658,26.20775</coordinates>
+                </Point>
+            </Placemark>
+        </Folder>
+    </Document>
+</kml>
