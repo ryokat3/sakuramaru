@@ -6,7 +6,8 @@
   "scripts": {
     "clean": "shx rm -rf dist release",
     "build": "webpack-cli && shx cp dist/index.html .",
-    "release": "electron-builder build --win",
+    "release:win": "electron-builder build --win",
+    "release:linux": "electron-builder build --linux",
     "start": "electron ./dist",
     "test": "cross-env TS_NODE_PROJECT=tsconfig.json mocha --timeout 30000 --exit -r ts-node/register test/**/*.ts",
     "test:file": "cross-env TS_NODE_PROJECT=tsconfig.json mocha --timeout 300000 --exit -r ts-node/register",

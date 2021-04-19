@@ -3,7 +3,7 @@ import * as TE from "fp-ts/lib/TaskEither"
 import { right } from "fp-ts/lib/Either"
 import { MapDataType } from "../../MapData"
 import { Dispatcher, DispatcherType } from "../../utils/FdtFlux"
-import { getRestTE, liftRestTE  } from "../../utils/RestTaskEither"
+import { getRestTE, liftRestTE  } from "../../utils/restTaskEither"
 import { AppConfig } from "../AppConfig"
 import { TopFdt } from "./TopFdt"
 
