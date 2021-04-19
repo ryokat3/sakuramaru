@@ -6,6 +6,7 @@
   "scripts": {
     "clean": "shx rm -rf dist release",
     "build": "webpack-cli && shx cp dist/index.html .",
+    "server": "http-server -c-1",
     "test": "cross-env TS_NODE_PROJECT=tsconfig.json mocha --timeout 30000 --exit -r ts-node/register test/**/*.ts",
     "test:file": "cross-env TS_NODE_PROJECT=tsconfig.json mocha --timeout 300000 --exit -r ts-node/register",
     "lint": "tslint --fix --project ."
@@ -46,6 +47,7 @@
     "cross-env": "^7.0.2",
     "html-webpack-inline-source-plugin": "0.0.10",
     "html-webpack-plugin": "^3.2.0",
+    "http-server": "^0.12.3",
     "mocha": "^7.1.1",
     "shx": "^0.3.2",
     "ts-loader": "^6.2.2",

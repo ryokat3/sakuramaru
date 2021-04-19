@@ -33,7 +33,7 @@ export const MapSelector: React.FunctionComponent<MapSelectorProps> = (props: Ma
         <FormControl className={context.style.formControl}>
             <InputLabel>Map</InputLabel>
             <Select value={props.mapFile} onChange={(e) => {
-                const rightMapData = JSON.parse(e.target.value as string) as  { fileName: string, overlap: TopStateType['overlap'] }
+                const rightMapData = JSON.parse(e.target.value as string) as { fileName: string, overlap: TopStateType['overlap'] }
                 context.dispatcher.selectMap(rightMapData)
                 if (props.mapImage[rightMapData.fileName] === undefined) {
                     context.dispatcher.getMap(context.appConfig, rightMapData.fileName)

@@ -8,9 +8,12 @@
 > - [Documentation]
 > - [Internal]
 
-## 0.6.0
+## 0.6.X
 - **Documentation**
   - Fixed the filename of README image
+
+- **Internal**
+  - Added http-server npm package for development
 
 ## 0.6.0
 - **Internal**
