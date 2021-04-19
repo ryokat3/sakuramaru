@@ -9,6 +9,10 @@
 > - [Internal]
 
 ## 0.6.0
+- **Documentation**
+  - Fixed the filename of README image
+
+## 0.6.0
 - **Internal**
   - Remove Electron version
   
