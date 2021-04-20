@@ -8,6 +8,10 @@
 > - [Documentation]
 > - [Internal]
 
+## 0.6.2
+- **Internal**
+  - Remove Mt.Fuji summit
+
 ## 0.6.1
 - **Bug Fix**
   - Fix full screen behavior
