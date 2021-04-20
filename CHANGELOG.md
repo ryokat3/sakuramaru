@@ -8,7 +8,10 @@
 > - [Documentation]
 > - [Internal]
 
-## 0.6.X
+## 0.6.1
+- **Bug Fix**
+  - Fix full screen behavior
+
 - **Documentation**
   - Fixed the filename of README image
 

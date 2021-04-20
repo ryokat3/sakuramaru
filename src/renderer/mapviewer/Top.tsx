@@ -33,7 +33,7 @@ export interface TopContextType {
 
 export const TopContext = createContext<TopContextType>(Object.create(null))
 
-export const Top: React.FunctionComponent<{}> = () => {
+export const Top: React.FunctionComponent<{}> = () => {    
     const [state, dispatch] = React.useReducer(topReducer, initialTopState)
     const dispatcher = topDispatcher.build(dispatch)
     const style = useStyles()
@@ -41,8 +41,6 @@ export const Top: React.FunctionComponent<{}> = () => {
     useEffect(() => {
         dispatcher.getMapData(state.appConfig)
     }, [])
-
-    // const mapDivRef = React.useRef(null)
 
     const context = {
         dispatcher: dispatcher,
@@ -52,11 +50,11 @@ export const Top: React.FunctionComponent<{}> = () => {
 
     document.onfullscreenchange = (_)=>{
         if (document.fullscreenEnabled) {
-            if (document.fullscreenElement === null) {
-                dispatcher.changeMapSize([600, 200])                
+            if (document.fullscreenElement === null) {                 
+                dispatcher.changeMapSize((state.overlap === "left") ? [600, 200] : [200, 600])                                
             }
-            else {    
-                dispatcher.changeMapSize([window.innerHeight, Math.floor(window.innerWidth / 2) ])
+            else {                                    
+                dispatcher.changeMapSize((state.overlap === "left") ? [window.innerHeight, Math.floor(window.innerWidth / 2) ]: [Math.floor(window.innerWidth / 2), window.innerHeight ])
             }
         }
     }
