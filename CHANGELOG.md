@@ -12,6 +12,9 @@
 - **Internal**
   - Remove Mt.Fuji summit
 
+- **Documentation**
+  - Updated README.md
+
 ## 0.6.1
 - **Bug Fix**
   - Fix full screen behavior

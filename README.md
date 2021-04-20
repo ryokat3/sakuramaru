@@ -1,8 +1,16 @@
 # 3D Aerial View from the Ark Sakura
 
-3D Aerial Photograph Viewer suggested in [The Ark Sakura](https://en.wikipedia.org/wiki/The_Ark_Sakura)
+3D Aerial Photograph Viewer inspired by [The Ark Sakura](https://en.wikipedia.org/wiki/The_Ark_Sakura)
+
+
+## Get started
 
 [Demo](https://wak109.github.io/sakuramaru/)
+
+![Fukushima Daiichi Nuclear Power Plant, Fukushima, Japan](./media/Fukushima_Daiichi_Nuclear_Power_Plant.png)
+
+Fukushima Daiichi Nuclear Power Plant, Fukushima, Japan, 2018
+
 
 ## What is 3D Aerial Photograph
 
@@ -23,10 +31,6 @@
 
 Shibuya crossing, Tokyo, Japan, 1974
 
-![Fukushima Daiichi Nuclear Power Plant, Fukushima, Japan](./media/Fukushima_Daiichi_Nuclear_Power_Plant.png)
-
-Fukushima Daiichi Nuclear Power Plant, Fukushima, Japan, 2018
-
 
 ## What you will experience
 
@@ -34,7 +38,9 @@ Fukushima Daiichi Nuclear Power Plant, Fukushima, Japan, 2018
 
 *The Ark Sakura*, Kobo Abe, translated by Juliet Winters Carpenter
 
+![Kesennuma, Miyagi, Japan](./media/Kesennuma_2011.png)
 
+Kesennuma, Miyagi, Japan, 2011
 
 #### *Note*
 - *Source of Aerial Photographs:* [The web site of Japanese Geographical Survey Institute](https://mapps.gsi.go.jp/)
