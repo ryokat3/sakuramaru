@@ -8,6 +8,11 @@
 > - [Documentation]
 > - [Internal]
 
+## 0.6.3
+- **Documentation**
+  - Changed the author
+
+
 ## 0.6.2
 - **Internal**
   - Remove Mt.Fuji summit

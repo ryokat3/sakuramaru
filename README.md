@@ -5,7 +5,7 @@
 
 ## Get started
 
-[Demo](https://wak109.github.io/sakuramaru/)
+[Demo](https://ryokat3.github.io/sakuramaru/)
 
 ![Fukushima Daiichi Nuclear Power Plant, Fukushima, Japan](./media/Fukushima_Daiichi_Nuclear_Power_Plant.png)
 
@@ -44,4 +44,4 @@ Kesennuma, Miyagi, Japan, 2011
 
 #### *Note*
 - *Source of Aerial Photographs:* [The web site of Japanese Geographical Survey Institute](https://mapps.gsi.go.jp/)
-- Aerial photographs are retouched by [Sakukramaru](https://github.com/wak109/sakuramaru)
+- Aerial photographs are retouched by [Sakukramaru](https://github.com/ryokat3/sakuramaru)
