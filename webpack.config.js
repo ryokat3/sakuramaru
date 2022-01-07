@@ -2,7 +2,7 @@ const path = require('path')
 const package_json = require('./package.json')
 const fs = require('fs')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin')
+const InlineSourceWebpackPlugin = require('inline-source-webpack-plugin')
 
 class CopyPackageJsonPlugin {
     constructor(filePath, template) {
@@ -57,10 +57,9 @@ const rendererConfig = {
         new HtmlWebpackPlugin({
             title: "Sakuramaru",
             filename: 'index.html',
-            template: 'html/index.html',
-            inlineSource: '.(js|css)$' // HtmlWebpackInlineSourcePlugin
+            template: 'html/index.html'            
         }),
-        new HtmlWebpackInlineSourcePlugin()
+        new InlineSourceWebpackPlugin()
     ]
 }
 

@@ -20,7 +20,8 @@ type DispatchReterunType<T> = T extends ((...args: any[]) => Promise<any>) ? Pro
 type DispatchFunctionType<T> = (...args: DispatchArgsType<T>) => DispatchReterunType<T>
 
 
-export class Dispatcher<T extends { [type: string]: unknown }, Keys extends keyof T = never> {
+// export class Dispatcher<T extends { [type: string]: unknown }, Keys extends keyof T = never> {
+export class Dispatcher<T extends { [type: string]: any }, Keys extends keyof T = never> {
     constructor(
         private readonly dispatcher: { [Key in keyof T]: (dispatch: Dispatch<FSA<string>>) => DispatchFunctionType<T[Key]> } = Object.create(null)
     ) {}
@@ -40,8 +41,9 @@ export class Dispatcher<T extends { [type: string]: unknown }, Keys extends keyo
     }
 
     public addSyncAction<Key extends keyof FilterObject<SelectObject<{ [LtdKey in Exclude<keyof T, Keys>]: T[LtdKey] }, (...args: any[]) => any >, (...args: any[]) => Promise<any> >>(
-        key: Key,
-        func: T[Key] // (...args: Parameters<T[Key]>) => ReturnType<T[Key]>
+        key: Key,        
+        // func: (...args: Parameters<T[Key]>) => ReturnType<T[Key]>
+        func: T[Key]
     ) {
         return new Dispatcher<T, Keys|Key>({
             ...this.dispatcher,
@@ -60,7 +62,7 @@ export class Dispatcher<T extends { [type: string]: unknown }, Keys extends keyo
 
     public addAsyncAction<Key extends keyof SelectObject<{ [LtdKey in Exclude<keyof T, Keys>]: T[LtdKey] }, (...args: any[]) => Promise<any>>>(
         key: Key,
-        //func: (...args: Parameters<T[Key]>) => Promise<Unpromise<ReturnType<T[Key]>>>
+        // func: (...args: Parameters<T[Key]>) => Promise<Unpromise<ReturnType<T[Key]>>>
         func: T[Key]
     ) {
         return new Dispatcher<T, Keys|Key>({
@@ -104,14 +106,17 @@ type BoxReducerPayloadType<T extends BoxType<unknown>> = T extends BoxType<void|
 
 type ReducerPayloadType<T> = BoxReducerPayloadType<BoxType<T>>
 
-type BoxReducerErrorPayloadType<T extends BoxType<unknown>> = T extends BoxType<((...args: any[]) => any)> ? ErrorType<Unpromise<ReturnType<T['type']>>> : ErrorType<T['type']>
+type UnpromiseReturnType<T extends (...args:any[]) => any> = T extends (...args:any[]) => Promise<infer X> ? X : ReturnType<T>
+
+// type BoxReducerErrorPayloadType<T extends BoxType<unknown>> = T extends BoxType<((...args: any[]) => any)> ? ErrorType<Unpromise<ReturnType<T['type']>>> : ErrorType<T['type']>
+
+type BoxReducerErrorPayloadType<T extends BoxType<unknown>> = T extends BoxType<((...args: any[]) => any)> ? ErrorType<UnpromiseReturnType<T['type']>> : ErrorType<T['type']>
 
 type ReducerErrorPayloadType<T> = BoxReducerErrorPayloadType<BoxType<T>>
 
 type ReducerCallbackType<State, PayloadType> = (state: State, payload: PayloadType, error?: boolean, meta?: any) => State
 
 type ErrorKeysList<T extends { [type: string]: unknown }> = keyof SelectObject<T, (...args: any[]) => PromiseUnion<any>>
-
 
 export class Reducer<T extends { [type: string]: unknown },
         State,

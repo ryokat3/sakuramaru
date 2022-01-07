@@ -8,6 +8,11 @@
 > - [Documentation]
 > - [Internal]
 
+## 0.6.4
+- **Internal**
+  - Updated dependencies
+  - Changed the webpack source insertion plugin
+
 ## 0.6.3
 - **Documentation**
   - Changed the author
