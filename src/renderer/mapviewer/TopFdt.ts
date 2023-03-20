@@ -10,7 +10,7 @@ export type TopFdt = {
     gripMap: GripType,
     ungripMap: void,
     moveMap: [number, number],
-    selectMap: { fileName: string, overlap: TopStateType['overlap'] },
+    selectMap: { fileName: string, overlap: TopStateType["overlap"] },
     switchSync: boolean,
-    changeMapSize: [number, number],
+    changeMapSize: [number, number]
 }

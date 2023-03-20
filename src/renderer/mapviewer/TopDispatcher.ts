@@ -22,9 +22,9 @@ export const topDispatcher = new Dispatcher<TopFdt>()
     )())
     .addAsyncAction("getMap", async (appConfig: AppConfig, fileName: string) => {
         return new Promise((resolve)=>{
-            const image = new Image()            
-            image.addEventListener('load', ()=>{
-                resolve(right({ fileName:fileName, image:image}))
+            const image = new Image()
+            image.addEventListener("load", ()=>{
+                resolve(right({ fileName, image}))
             }, false)
             image.src = getMapFilePath(appConfig, fileName)
         })

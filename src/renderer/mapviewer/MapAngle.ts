@@ -11,7 +11,7 @@ export function rotate(p:Point, d:number):Point {
 }
 
 export function direction(root:Point, p:Point, d:number):number {
-    const newP = rotate(p, d)    
+    const newP = rotate(p, d)
     return Math.atan2(newP[1] - root[1], newP[0] - root[0])
 }
 

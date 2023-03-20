@@ -20,9 +20,9 @@ export const initialTopState = {
     viewHeight: 600,
     rightView: {
         left: 0,
-        top: 0        
+        top: 0
     },
-    leftView: {        
+    leftView: {
         left: 0,
         top: 0
     },
@@ -37,16 +37,16 @@ function getRightMapData(mapData:MapDataType, mapFileName:string|undefined) {
     return (mapFileName !== undefined) ? mapData.maps[mapFileName] : undefined
 }
 
-export function getRightMapImage(mapImage:TopStateType['mapImage'], mapFileName:string|undefined) {
+export function getRightMapImage(mapImage:TopStateType["mapImage"], mapFileName:string|undefined) {
     return (mapFileName !== undefined) ? mapImage[mapFileName] : undefined
 }
 
 
-export function getLeftViewFile(mapData:MapDataType, mapFileName:string|undefined, overlap:TopStateType['overlap'] = 'left') {    
-    return (overlap === "left") ? getRightMapData(mapData, mapFileName)?.leftMap?.fileName : getRightMapData(mapData, mapFileName)?.upperMap?.fileName    
+export function getLeftViewFile(mapData:MapDataType, mapFileName:string|undefined, overlap:TopStateType["overlap"] = "left") {
+    return (overlap === "left") ? getRightMapData(mapData, mapFileName)?.leftMap?.fileName : getRightMapData(mapData, mapFileName)?.upperMap?.fileName
 }
 
-export function getLeftMapImage(mapData:MapDataType, mapImage:TopStateType['mapImage'], mapFileName:string|undefined, overlap:TopStateType['overlap'] = 'left') {    
+export function getLeftMapImage(mapData:MapDataType, mapImage:TopStateType["mapImage"], mapFileName:string|undefined, overlap:TopStateType["overlap"] = "left") {
     const leftViewFileName = getLeftViewFile(mapData, mapFileName, overlap)
     return (leftViewFileName !== undefined) ? mapImage[leftViewFileName] : undefined
 }
@@ -85,11 +85,11 @@ export const topReducer = new Reducer<TopFdt, TopStateType>()
             viewHeight: (overlapChanged) ? state.viewWidth : state.viewHeight,
             leftView: {
                 left: point[0],
-                top: point[1]                
+                top: point[1]
             },
             rightView: {
-                left: point[2],    
-                top: point[3]                
+                left: point[2],
+                top: point[3]
             }
         }
     })
@@ -112,10 +112,10 @@ export const topReducer = new Reducer<TopFdt, TopStateType>()
             return state
         } else if ((state.syncMapMove === true) && (points.length == 0)) {
             return moveLeftMap(moveRightMap(state, movementX, movementY), movementX, movementY)
-/*            
-        } else if ((state.syncMapMove === true) && (state.grip === "left")) {            
+/*
+        } else if ((state.syncMapMove === true) && (state.grip === "left")) {
             return moveLeftMap(state, movementX, movementY)
-        } else if ((state.syncMapMove === true) && (state.grip === "right")) {            
+        } else if ((state.syncMapMove === true) && (state.grip === "right")) {
             return moveRightMap(state, movementX, movementY)
 */
         } else if (state.grip === "left") {
@@ -131,7 +131,7 @@ export const topReducer = new Reducer<TopFdt, TopStateType>()
             ...state,
             viewHeight: height,
             viewWidth: width
-        }    
+        }
     })
     .add("switchSync", (state, syncMapMove) => {
         return {

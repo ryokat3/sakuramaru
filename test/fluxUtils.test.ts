@@ -56,10 +56,10 @@ describe("fluxUtils", () => {
 
     it("Reducer Either", () => {
         const reducer = new Reducer<ActionDesign, string>()
-            .add("either", (state: string, value: string) => `${state}_${value}`)            
-            .addError("either", (state: string, value: number) => `${state}_${value + 1}`)            
+            .add("either", (state: string, value: string) => `${state}_${value}`)
+            .addError("either", (state: string, value: number) => `${state}_${value + 1}`)
             .add("eitherPromise", (state: string, value: string) => `${state}_${value}`)
-            .addError("eitherPromise", (state: string, value: number) => `${state}_${value + 1}`)            
+            .addError("eitherPromise", (state: string, value: number) => `${state}_${value + 1}`)
             .build()
 
         chai.assert.equal(reducer("Hello", { type: "either", payload: "true" }), "Hello_true")

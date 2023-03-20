@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles } from "@material-ui/core/styles"
 import { TopContext } from "./Top"
 import { GripType } from "./TopReducer"
 
@@ -31,19 +31,19 @@ const useStyles = makeStyles({
         // overflow: "auto",
         display: "inline-block",
 
-        '&:before': {
-            content: '""',
-            position: 'absolute',                        
+        "&:before": {
+            content: "\"\"",
+            position: "absolute",
             width: (props:MapViewerProps)=>`${props.left + props.width}px`,
             height: (props:MapViewerProps)=>`${props.top + props.height}px`,
-            top: (props:MapViewerProps)=>`-${props.left}px`,                        
-            left: (props:MapViewerProps)=>`-${props.top}px`,            
+            top: (props:MapViewerProps)=>`-${props.left}px`,
+            left: (props:MapViewerProps)=>`-${props.top}px`,
             background: (props:MapViewerProps)=>`url(${props.mapFile})`,
-            transform: 'rotate(0deg)',            
-            'z-index': -1
+            transform: "rotate(0deg)",
+            "z-index": -1
         },
-        position: 'relative',
-        overflow: 'hidden'
+        position: "relative",
+        overflow: "hidden"
     }
 })
 
@@ -60,25 +60,25 @@ export const MapViewer: React.FunctionComponent<MapViewerProps> = (props) => {
             className={classes.root}
             // style={mapStyle}
             onMouseDown={(_) => {
-                console.log(`mouse down`)    
+                console.log(`mouse down`)
                 context.dispatcher.gripMap(props.id)
             }}
             onMouseUp={(_) => {
-                console.log(`mouse up`)        
+                console.log(`mouse up`)
                 context.dispatcher.ungripMap()
             }}
             onMouseLeave={(_) => {
-                console.log(`mouse leave`)        
+                console.log(`mouse leave`)
                 context.dispatcher.ungripMap()
             }}
             onMouseMove={(e) => {
-                console.log(`mouse move`)        
+                console.log(`mouse move`)
                 context.dispatcher.moveMap([e.movementX, e.movementY])
             }}
 
-            onTouchStart={(e) => {  
+            onTouchStart={(e) => {
                 console.log(`touch start: ${e.touches.length}`)
-                
+
                 if (document.fullscreenEnabled) {
                     const now = new Date().getTime()
                     if ((now - tapTime) < props.doubleTapInterval) {
@@ -86,12 +86,12 @@ export const MapViewer: React.FunctionComponent<MapViewerProps> = (props) => {
                             props.mapDivRef.current.requestFullscreen()
                         }
                         else {
-                            document.exitFullscreen()    
+                            document.exitFullscreen()
                         }
                     }
-                    setTapTime(now)                 
-                }   
-                
+                    setTapTime(now)
+                }
+
                 document.addEventListener("touchmove", preventDefault, { passive: false})
                 document.body.style.touchAction = "none"
                 document.body.style.overflow = "hidden"
@@ -100,26 +100,26 @@ export const MapViewer: React.FunctionComponent<MapViewerProps> = (props) => {
                 context.dispatcher.gripMap(props.id)
             }}
             onTouchEnd={(e) => {
-                console.log(`touch end: ${e.touches.length}`)                                     
+                console.log(`touch end: ${e.touches.length}`)
                 if (e.touches.length > 0) {
-                    return    
+                    return
                 }
                 context.dispatcher.ungripMap()
                 document.body.style.touchAction = "auto"
-                document.removeEventListener("touchmove", preventDefault)                
+                document.removeEventListener("touchmove", preventDefault)
             }}
             onTouchCancel={(e) => {
-                console.log(`touch cancel: ${e.touches.length}`)         
+                console.log(`touch cancel: ${e.touches.length}`)
                 if (e.touches.length > 0) {
-                    return    
+                    return
                 }
                 context.dispatcher.ungripMap()
                 document.body.style.touchAction = "auto"
-                document.removeEventListener("touchmove", preventDefault)                
+                document.removeEventListener("touchmove", preventDefault)
             }}
-            onTouchMove={(e) => {                
-                console.log(`touch move: ${e.touches.length}`)             
-                document.addEventListener("touchmove", preventDefault, { passive: false})    
+            onTouchMove={(e) => {
+                console.log(`touch move: ${e.touches.length}`)
+                document.addEventListener("touchmove", preventDefault, { passive: false})
                 document.body.style.touchAction = "none"
                 document.body.style.overflow = "hidden"
                 const moveX = e.changedTouches[0].clientX - touchX
@@ -128,7 +128,7 @@ export const MapViewer: React.FunctionComponent<MapViewerProps> = (props) => {
                 setTouchY(e.changedTouches[0].clientY)
                 context.dispatcher.moveMap([moveX, moveY])
 
-                // Cancel double tap                
+                // Cancel double tap
                 if (moveX + moveY > props.doubleTapDistance) {
                     setTapTime(0)
                 }

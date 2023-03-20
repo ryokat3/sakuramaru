@@ -9,8 +9,8 @@ import { PromiseUnion, BoxType, Unpromise, ValueType, ErrorType } from "./tsUtil
 ////////////////////////////////////////////////////////////////////////
 
 type BoxDispatchArgsType<T extends BoxType<unknown>> = T extends BoxType<void|null|undefined|never> ? []
-    : T extends BoxType<(...args: any[]) => any> ? Parameters<T['type']>
-    : T extends BoxType<any> ? [ T['type'] ]
+    : T extends BoxType<(...args: any[]) => any> ? Parameters<T["type"]>
+    : T extends BoxType<any> ? [ T["type"] ]
     : never
 
 type DispatchArgsType<T> = BoxDispatchArgsType<BoxType<T>>
@@ -41,7 +41,7 @@ export class Dispatcher<T extends { [type: string]: any }, Keys extends keyof T 
     }
 
     public addSyncAction<Key extends keyof FilterObject<SelectObject<{ [LtdKey in Exclude<keyof T, Keys>]: T[LtdKey] }, (...args: any[]) => any >, (...args: any[]) => Promise<any> >>(
-        key: Key,        
+        key: Key,
         // func: (...args: Parameters<T[Key]>) => ReturnType<T[Key]>
         func: T[Key]
     ) {
@@ -100,8 +100,8 @@ export type DispatcherType<D> =  D extends Dispatcher<infer T, infer Keys> ? { [
 
 
 type BoxReducerPayloadType<T extends BoxType<unknown>> = T extends BoxType<void|null|undefined|never> ? never
-    : T extends BoxType<(...args: any[]) => unknown> ? ValueType<Unpromise<ReturnType<T['type']>>>   
-    : T extends BoxType<unknown> ? T['type']
+    : T extends BoxType<(...args: any[]) => unknown> ? ValueType<Unpromise<ReturnType<T["type"]>>>
+    : T extends BoxType<unknown> ? T["type"]
     : never
 
 type ReducerPayloadType<T> = BoxReducerPayloadType<BoxType<T>>
@@ -110,7 +110,7 @@ type UnpromiseReturnType<T extends (...args:any[]) => any> = T extends (...args:
 
 // type BoxReducerErrorPayloadType<T extends BoxType<unknown>> = T extends BoxType<((...args: any[]) => any)> ? ErrorType<Unpromise<ReturnType<T['type']>>> : ErrorType<T['type']>
 
-type BoxReducerErrorPayloadType<T extends BoxType<unknown>> = T extends BoxType<((...args: any[]) => any)> ? ErrorType<UnpromiseReturnType<T['type']>> : ErrorType<T['type']>
+type BoxReducerErrorPayloadType<T extends BoxType<unknown>> = T extends BoxType<((...args: any[]) => any)> ? ErrorType<UnpromiseReturnType<T["type"]>> : ErrorType<T["type"]>
 
 type ReducerErrorPayloadType<T> = BoxReducerErrorPayloadType<BoxType<T>>
 

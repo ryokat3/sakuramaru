@@ -33,7 +33,7 @@ export interface TopContextType {
 
 export const TopContext = createContext<TopContextType>(Object.create(null))
 
-export const Top: React.FunctionComponent<{}> = () => {    
+export const Top: React.FunctionComponent<{}> = () => {
     const [state, dispatch] = React.useReducer(topReducer, initialTopState)
     const dispatcher = topDispatcher.build(dispatch)
     const style = useStyles()
@@ -43,17 +43,17 @@ export const Top: React.FunctionComponent<{}> = () => {
     }, [])
 
     const context = {
-        dispatcher: dispatcher,
-        style: style,
+        dispatcher,
+        style,
         appConfig: state.appConfig
     }
 
     document.onfullscreenchange = (_)=>{
         if (document.fullscreenEnabled) {
-            if (document.fullscreenElement === null) {                 
-                dispatcher.changeMapSize((state.overlap === "left") ? [600, 200] : [200, 600])                                
+            if (document.fullscreenElement === null) {
+                dispatcher.changeMapSize((state.overlap === "left") ? [600, 200] : [200, 600])
             }
-            else {                                    
+            else {
                 dispatcher.changeMapSize((state.overlap === "left") ? [window.innerHeight, Math.floor(window.innerWidth / 2) ]: [Math.floor(window.innerWidth / 2), window.innerHeight ])
             }
         }
@@ -73,8 +73,8 @@ export const Top: React.FunctionComponent<{}> = () => {
             height={state.viewHeight}
             doubleTapInterval={state.appConfig.doubleTapInterval}
             doubleTapDistance={state.appConfig.doubleTapDistance}
-            overlap={state.overlap}    
-        ></MapCanvas>        
+            overlap={state.overlap}
+        ></MapCanvas>
         <MapPoints topL={state.leftView.top} leftL={state.leftView.left} topR={state.rightView.top} leftR={state.rightView.left}></MapPoints>
         <MapSyncSwiitch syncMapMove={state.syncMapMove} ></MapSyncSwiitch>
         <MapData data={state.mapData.data}></MapData>
