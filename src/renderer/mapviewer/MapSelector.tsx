@@ -1,7 +1,7 @@
-import FormControl from "@material-ui/core/FormControl"
-import InputLabel from "@material-ui/core/InputLabel"
-import MenuItem from "@material-ui/core/MenuItem"
-import Select from "@material-ui/core/Select"
+import FormControl from "@mui/material/FormControl"
+import InputLabel from "@mui/material/InputLabel"
+import MenuItem from "@mui/material/MenuItem"
+import Select from "@mui/material/Select"
 import React from "react"
 import { MapDataType } from "../../MapData"
 import { TopContext } from "./Top"
@@ -30,7 +30,10 @@ function getMenuList(mapData:MapDataType["maps"]):[string, { fileName: string, o
 export const MapSelector: React.FunctionComponent<MapSelectorProps> = (props: MapSelectorProps) => {
 
     return <TopContext.Consumer>{(context) =>
-        <FormControl className={context.style.formControl}>
+        <FormControl sx={{
+                margin: (theme) => theme.spacing(1),
+                minWidth: 120
+            }}>
             <InputLabel>Map</InputLabel>
             <Select value={props.mapFile} onChange={(e) => {
                 const rightMapData = JSON.parse(e.target.value as string) as { fileName: string, overlap: TopStateType["overlap"] }

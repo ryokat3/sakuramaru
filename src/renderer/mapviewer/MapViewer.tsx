@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { makeStyles } from "@material-ui/core/styles"
+import { css } from "@emotion/css"
 import { TopContext } from "./Top"
 import { GripType } from "./TopReducer"
 
@@ -21,35 +21,8 @@ const preventDefault = (e: TouchEvent) => {
     }
 }
 
-const useStyles = makeStyles({
-    root: {
-        // backgroundImage: (props:MapViewerProps)=>`url(${props.mapFile})`,
-        width: (props:MapViewerProps)=>`${props.width}px`,
-        height: (props:MapViewerProps)=>`${props.height}px`,
-        // backgroundPosition: (props:MapViewerProps)=>`-${props.top}px -${props.left}px`,
-        overscrollBehavior: "none",
-        // overflow: "auto",
-        display: "inline-block",
-
-        "&:before": {
-            content: "\"\"",
-            position: "absolute",
-            width: (props:MapViewerProps)=>`${props.left + props.width}px`,
-            height: (props:MapViewerProps)=>`${props.top + props.height}px`,
-            top: (props:MapViewerProps)=>`-${props.left}px`,
-            left: (props:MapViewerProps)=>`-${props.top}px`,
-            background: (props:MapViewerProps)=>`url(${props.mapFile})`,
-            transform: "rotate(0deg)",
-            "z-index": -1
-        },
-        position: "relative",
-        overflow: "hidden"
-    }
-})
 
 export const MapViewer: React.FunctionComponent<MapViewerProps> = (props) => {
-
-    const classes = useStyles(props)
 
     const [ touchX, setTouchX ] = useState(0)
     const [ touchY, setTouchY ] = useState(0)
@@ -57,8 +30,25 @@ export const MapViewer: React.FunctionComponent<MapViewerProps> = (props) => {
 
     return <TopContext.Consumer>{(context) =>
         <div
-            className={classes.root}
-            // style={mapStyle}
+            className={css({        
+                width: `${props.width}px`,
+                height: `${props.height}px`,        
+                overscrollBehavior: "none",        
+                display: "inline-block",
+                "&:before": {
+                    content: "\"\"",
+                    position: "absolute",
+                    width: `${props.left + props.width}px`,
+                    height: `${props.top + props.height}px`,
+                    top: `-${props.left}px`,
+                    left: `-${props.top}px`,
+                    background: `url(${props.mapFile})`,
+                    transform: "rotate(0deg)",
+                    "z-index": -1
+                },
+                position: "relative",
+                overflow: "hidden"               
+            })}            
             onMouseDown={(_) => {
                 console.log(`mouse down`)
                 context.dispatcher.gripMap(props.id)

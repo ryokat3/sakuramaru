@@ -1,6 +1,6 @@
 {
   "name": "sakuramaru",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "3D Aerial Photograph Viewer",
   "main": "main.js",
   "scripts": {
@@ -28,7 +28,10 @@
     }
   },
   "dependencies": {
-    "@material-ui/core": "^4.9.10",
+    "@emotion/css": "^11.10.6",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/material": "^5.11.14",
     "boost-ts": "^2.2.0",
     "commander": "^10.0.0",
     "flux-standard-action": "^2.1.2",
@@ -52,10 +55,8 @@
     "shx": "^0.3.4",
     "ts-loader": "^9.4.2",
     "ts-node": "^10.9.1",
-    "tslint": "^6.1.1",
-    "tslint-loader": "^3.5.4",
     "typescript": "^5.0.2",
-    "webpack": "^5.76.2",
+    "webpack": "^5.76.3",
     "webpack-cli": "^5.0.1"
   }
 }

@@ -1,4 +1,4 @@
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
+// import { Theme } from "@emotion/react"
 import React from "react"
 import { createContext, useEffect } from "react"
 import { MapData } from "./MapData"
@@ -10,6 +10,7 @@ import { topDispatcher, TopDispatcherType } from "./TopDispatcher"
 import { initialTopState, topReducer, getRightMapImage, getLeftMapImage } from "./TopReducer"
 import { AppConfig } from "../AppConfig"
 
+/*
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     formControl: {
@@ -24,10 +25,11 @@ const useStyles = makeStyles((theme: Theme) =>
     }
   })
 )
+*/
 
 export interface TopContextType {
     dispatcher: TopDispatcherType
-    style: ReturnType<typeof useStyles>
+    // style: ReturnType<typeof useStyles>
     appConfig: AppConfig
 }
 
@@ -36,7 +38,7 @@ export const TopContext = createContext<TopContextType>(Object.create(null))
 export const Top: React.FunctionComponent<{}> = () => {
     const [state, dispatch] = React.useReducer(topReducer, initialTopState)
     const dispatcher = topDispatcher.build(dispatch)
-    const style = useStyles()
+    // const style = useStyles()
 
     useEffect(() => {
         dispatcher.getMapData(state.appConfig)
@@ -44,7 +46,7 @@ export const Top: React.FunctionComponent<{}> = () => {
 
     const context = {
         dispatcher,
-        style,
+        // style,
         appConfig: state.appConfig
     }
 
