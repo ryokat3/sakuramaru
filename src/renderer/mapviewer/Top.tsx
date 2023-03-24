@@ -10,26 +10,8 @@ import { topDispatcher, TopDispatcherType } from "./TopDispatcher"
 import { initialTopState, topReducer, getRightMapImage, getLeftMapImage } from "./TopReducer"
 import { AppConfig } from "../AppConfig"
 
-/*
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    formControl: {
-        margin: theme.spacing(1),
-        minWidth: 120
-    },
-    selectEmpty: {
-        marginTop: theme.spacing(2)
-    },
-    mapViewer: {
-        display: "inline-block"
-    }
-  })
-)
-*/
-
 export interface TopContextType {
-    dispatcher: TopDispatcherType
-    // style: ReturnType<typeof useStyles>
+    dispatcher: TopDispatcherType    
     appConfig: AppConfig
 }
 
@@ -37,16 +19,14 @@ export const TopContext = createContext<TopContextType>(Object.create(null))
 
 export const Top: React.FunctionComponent<{}> = () => {
     const [state, dispatch] = React.useReducer(topReducer, initialTopState)
-    const dispatcher = topDispatcher.build(dispatch)
-    // const style = useStyles()
+    const dispatcher = topDispatcher.build(dispatch)    
 
     useEffect(() => {
         dispatcher.getMapData(state.appConfig)
     }, [])
 
     const context = {
-        dispatcher,
-        // style,
+        dispatcher,        
         appConfig: state.appConfig
     }
 
