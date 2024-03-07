@@ -5,7 +5,7 @@
 
 ## Get started
 
-[Demo](https://ryokat3.github.io/sakuramaru/)
+[Demo](https://ryokat3.github.io/sakuramaru/index.html)
 
 ![Fukushima Daiichi Nuclear Power Plant, Fukushima, Japan](./media/Fukushima_Daiichi_Nuclear_Power_Plant_video.gif)
 
