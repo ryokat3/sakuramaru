@@ -8,6 +8,10 @@
 > - [Documentation]
 > - [Internal]
 
+## 0.8.2
+- **Documentation**
+  - Added motion gif to README.md
+
 ## 0.6.4
 - **Internal**
   - Updated dependencies

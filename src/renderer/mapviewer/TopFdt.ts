@@ -14,3 +14,4 @@ export type TopFdt = {
     switchSync: boolean,
     changeMapSize: [number, number]
 }
+    

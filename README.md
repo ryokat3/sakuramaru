@@ -7,7 +7,7 @@
 
 [Demo](https://ryokat3.github.io/sakuramaru/)
 
-![Fukushima Daiichi Nuclear Power Plant, Fukushima, Japan](./media/Fukushima_Daiichi_Nuclear_Power_Plant.png)
+![Fukushima Daiichi Nuclear Power Plant, Fukushima, Japan](./media/Fukushima_Daiichi_Nuclear_Power_Plant_video.gif)
 
 Fukushima Daiichi Nuclear Power Plant, Fukushima, Japan, 2018
 
@@ -38,7 +38,7 @@ Shibuya crossing, Tokyo, Japan, 1974
 
 *The Ark Sakura*, Kobo Abe, translated by Juliet Winters Carpenter
 
-![Kesennuma, Miyagi, Japan](./media/Kesennuma_2011.png)
+![Kesennuma, Miyagi, Japan](./media/Kesennuma_2011_video.gif)
 
 Kesennuma, Miyagi, Japan, 2011
 
