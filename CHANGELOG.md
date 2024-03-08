@@ -8,6 +8,10 @@
 > - [Documentation]
 > - [Internal]
 
+## 0.9.0
+- **Internal**
+  - Use workflow to deploy to GitHub Pages
+
 ## 0.8.2
 - **Documentation**
   - Added motion gif to README.md
