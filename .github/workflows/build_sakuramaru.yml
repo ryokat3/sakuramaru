@@ -6,6 +6,9 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  id-token: write
+
 jobs:
   build:
     name: Build Sakuramaru
@@ -33,6 +36,7 @@ jobs:
         uses: actions/upload-pages-artifact@v2
 
   deploy:
+    name: Deploy Sakuramaru
     environment:
       name: github-pages
       url: ${{steps.deployment.outputs.page_url}}
