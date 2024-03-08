@@ -2,14 +2,35 @@
 
 3D Aerial Photograph Viewer inspired by [The Ark Sakura](https://en.wikipedia.org/wiki/The_Ark_Sakura)
 
-
-## Get started
-
-[Demo](https://ryokat3.github.io/sakuramaru/index.html)
-
 ![Fukushima Daiichi Nuclear Power Plant, Fukushima, Japan](./media/Fukushima_Daiichi_Nuclear_Power_Plant_video.gif)
 
 Fukushima Daiichi Nuclear Power Plant, Fukushima, Japan, 2018
+
+## Get started
+
+1. Open the GitHub Pages for [Sakuramaru demo](https://ryokat3.github.io/sakuramaru/index.html) on your smart phone or PC browser.
+
+<img src="./media/Operation_1_opened.png" width=25%></img>
+
+2. Select a location for 3D aerial view, then the stereo photography will open in control mode.
+
+<img src="./media/Operation_2_map_pulldown_menu.png" width=25%></img>
+
+3. Double tap the stereo photography, then it will be shown in full-screen mode.
+
+<img src="./media/Operation_3_map_selected.png" width=25%></img>
+
+4. Double tap the stereo photography, then it will be shown in full-screen mode.
+
+<img src="./media/Operation_4_full_screen.png" width=25%></img>
+
+5. Drag the stereo photography as you like.
+
+<img src="./media/Fukushima_Daiichi_Nuclear_Power_Plant_video.gif" width=25%></img>
+
+6. Double tap the stereo photography, then it will be shown in control mode, then enjoy other locations.
+
+<img src="./media/Operation_3_map_selected.png" width=25%></img>
 
 
 ## What is 3D Aerial Photograph
@@ -38,7 +59,7 @@ Shibuya crossing, Tokyo, Japan, 1974
 
 *The Ark Sakura*, Kobo Abe, translated by Juliet Winters Carpenter
 
-![Kesennuma, Miyagi, Japan](./media/Kesennuma_2011_video.gif)
+![Kesennuma, Miyagi, Japan](./media/Kesennuma_2011.png)
 
 Kesennuma, Miyagi, Japan, 2011
 
