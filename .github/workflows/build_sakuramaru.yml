@@ -1,0 +1,38 @@
+name: Sakuramaru Build
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  qiita_sync_check:
+    name: Build Sakuramaru
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Install modules
+        run: npm install
+      - name: Build Sakuramanu
+        run: npm run build
+      - name: Git
+        run: |
+          find sakuramaru/src -regex '.*\.tsx?' | xargs git add
+          find sakuramaru/html -regex '.*\.html' | xargs git add
+          if ! git diff --staged --exit-code --quiet
+          then
+            echo "Push new index.html"
+            git config user.name github-actions
+            git config user.email github-actions@github.com
+            git add sakuramaru/index.html
+            git commit -m "Updated by Sakuramaru workflow"
+            git push
+          else
+            echo "No source code update"
+          fi
