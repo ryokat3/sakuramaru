@@ -1,14 +1,10 @@
-name: Sakuramaru Build
+name: Sakuramaru Build and Deployment
 
 on:
   push:
     branches:
       - main
   workflow_dispatch:
-
-permissions:  
-  pages: write
-  id-token: write
 
 jobs:
   build:
@@ -38,6 +34,9 @@ jobs:
 
   deploy:
     name: Deploy Sakuramaru
+    permissions:  
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{steps.deployment.outputs.page_url}}
