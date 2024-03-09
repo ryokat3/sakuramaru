@@ -8,6 +8,10 @@
 > - [Documentation]
 > - [Internal]
 
+## 0.9.1
+- **Internal**
+  - Upgrade Nodejs 18 -> 20
+
 ## 0.9.0
 - **Internal**
   - Use workflow to deploy to GitHub Pages
@@ -24,7 +28,6 @@
 ## 0.6.3
 - **Documentation**
   - Changed the author
-
 
 ## 0.6.2
 - **Internal**

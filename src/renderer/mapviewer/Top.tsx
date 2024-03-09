@@ -11,7 +11,7 @@ import { initialTopState, topReducer, getRightMapImage, getLeftMapImage } from "
 import { AppConfig } from "../AppConfig"
 
 export interface TopContextType {
-    dispatcher: TopDispatcherType    
+    dispatcher: TopDispatcherType
     appConfig: AppConfig
 }
 
@@ -19,14 +19,14 @@ export const TopContext = createContext<TopContextType>(Object.create(null))
 
 export const Top: React.FunctionComponent<{}> = () => {
     const [state, dispatch] = React.useReducer(topReducer, initialTopState)
-    const dispatcher = topDispatcher.build(dispatch)    
+    const dispatcher = topDispatcher.build(dispatch)
 
     useEffect(() => {
         dispatcher.getMapData(state.appConfig)
     }, [])
 
     const context = {
-        dispatcher,        
+        dispatcher,
         appConfig: state.appConfig
     }
 

@@ -30,10 +30,10 @@ export const MapViewer: React.FunctionComponent<MapViewerProps> = (props) => {
 
     return <TopContext.Consumer>{(context) =>
         <div
-            className={css({        
+            className={css({
                 width: `${props.width}px`,
-                height: `${props.height}px`,        
-                overscrollBehavior: "none",        
+                height: `${props.height}px`,
+                overscrollBehavior: "none",
                 display: "inline-block",
                 "&:before": {
                     content: "\"\"",
@@ -47,8 +47,8 @@ export const MapViewer: React.FunctionComponent<MapViewerProps> = (props) => {
                     "z-index": -1
                 },
                 position: "relative",
-                overflow: "hidden"               
-            })}            
+                overflow: "hidden"
+            })}
             onMouseDown={(_) => {
                 console.log(`mouse down`)
                 context.dispatcher.gripMap(props.id)
