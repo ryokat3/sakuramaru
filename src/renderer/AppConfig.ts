@@ -1,6 +1,6 @@
 
 export const defaultAppConfig = {
-    name: "sakuramaru",
+    name: "3D Aerial View",
     configFileName: "sakuramaru.json",
     mapDir: "map",
     mapData: "mapData.json",

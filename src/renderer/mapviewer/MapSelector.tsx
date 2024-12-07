@@ -34,7 +34,7 @@ export const MapSelector: React.FunctionComponent<MapSelectorProps> = (props: Ma
                 margin: (theme) => theme.spacing(1),
                 minWidth: 120
             }}>
-            <InputLabel>Map</InputLabel>
+            <InputLabel>Location</InputLabel>
             <Select value={props.mapFile} onChange={(e) => {
                 const rightMapData = JSON.parse(e.target.value as string) as { fileName: string, overlap: TopStateType["overlap"] }
                 context.dispatcher.selectMap(rightMapData)
